@@ -73,6 +73,7 @@ Two rules that hold no matter how the days actually land:
 - Autoencoder stretch model.
 - Generalization check against the fallback dataset.
 - A second pass at console polish.
+- Sharpen the entity fingerprint: card1-6 + addr1/addr2 alone still lets some genuinely different real cards collide (largest observed cluster: 5,862 transactions, ~1% of the dataset, on one fully-specified combination). A day-count field (`D1`) combined with the transaction timestamp is a known approach for tightening this on IEEE-CIS specifically. Documented as a known limitation, not a blocker, per Architecture §7.
 
 ---
 
