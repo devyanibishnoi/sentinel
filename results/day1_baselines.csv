@@ -1,0 +1,6 @@
+baseline,precision,recall,fpr,tp,fp,fn,tn,note
+random_prior,0.03390226794482114,0.03445817490494297,0.03468770987239758,145,4132,4063,114988,fraud_rate=0.0345 from train
+rule_population,0.053602206135815234,0.14781368821292776,0.09219274680993955,622,10982,3586,108138,amount > train p0.9 = 280.00 (chosen on val)
+statistical_population,0.06620861961274203,0.05038022813688213,0.02510073875083949,212,2990,3996,116130,|z| > 2 vs train mean/std (chosen on val)
+rule_entity,0.03319690768531151,0.0898645876077144,0.06503849487584765,219,6378,2218,91687,"new record-high amount for this entity; 18.5% of test rows are cold-start, excluded"
+statistical_entity,0.03798621048523481,0.1267361111111111,0.07918237108103478,292,7395,2012,85997,"|z| > 2 vs this entity's own prior mean/std (chosen on val); 22.4% of test rows lack 2+ prior transactions, excluded"

@@ -1,0 +1,47 @@
+{
+  "population_only": {
+    "pr_auc": 0.09224685714544092,
+    "roc_auc": 0.7196230911187746,
+    "n_features": 25
+  },
+  "combined": {
+    "pr_auc": 0.09100127558477897,
+    "roc_auc": 0.7099594726824343,
+    "n_features": 30
+  },
+  "pr_auc_lift": -0.001245581560661957,
+  "mega_cluster_hypothesis_check": {
+    "prior_count_le_20": {
+      "rows": 58735,
+      "pop_pr_auc": 0.14594353734353718,
+      "combined_pr_auc": 0.1433300845499598,
+      "lift": -0.0026134527935773866
+    },
+    "prior_count_le_50": {
+      "rows": 73970,
+      "pop_pr_auc": 0.12769941117701428,
+      "combined_pr_auc": 0.12594550097646323,
+      "lift": -0.0017539102005510454
+    }
+  },
+  "late_fusion_variants": {
+    "max_rank": {
+      "pr_auc": 0.06618169807699122,
+      "lift_vs_population_only": -0.02606515906844971
+    },
+    "mean_rank": {
+      "pr_auc": 0.041593554102451843,
+      "lift_vs_population_only": -0.05065330304298908
+    },
+    "weighted_0.7_pop_0.3_entity": {
+      "pr_auc": 0.056741969072038954,
+      "lift_vs_population_only": -0.03550488807340197
+    }
+  },
+  "diagnosis": {
+    "fraud_rate_cold_start_test_rows": 0.07758696223604661,
+    "fraud_rate_has_history_test_rows": 0.024248273666195697,
+    "share_of_test_fraud_that_is_cold_start": 0.4208650190114068,
+    "conclusion": "Entity-deviation shows no lift under joint-feature or late-fusion strategies. Fraud is heavily concentrated in cold-start transactions (no entity history yet), which an entity-deviation feature cannot see by construction, and IsolationForest is unsupervised so it can't learn to exploit entity_has_history's correlation with the label even though the flag is present. Validates TDS-3's choice to surface cold-start as an explicit typology tag rather than an implicit feature."
+  }
+}
