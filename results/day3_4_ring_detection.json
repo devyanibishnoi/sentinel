@@ -1,0 +1,3071 @@
+{
+  "caveat": "proxy_fraud_rate is a DERIVED PROXY LABEL, not verified ground truth, everywhere it appears in this file",
+  "fingerprint_field": "DeviceInfo",
+  "min_entities_per_fingerprint": 2,
+  "max_entities_per_fingerprint": 20,
+  "overall_test_fraud_rate": 0.034120394395433316,
+  "max_size": 50,
+  "n_oversized_components_excluded": 1,
+  "n_clusters_found": 437,
+  "clusters": [
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 4,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 6,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 4,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 15,
+      "n_transactions": 15,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 15,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 5,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 1.0,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.9090909090909091,
+      "n_fraud_transactions": 10,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 9,
+      "n_transactions": 9,
+      "proxy_fraud_rate": 0.8888888888888888,
+      "n_fraud_transactions": 8,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.75,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.75,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.75,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.7142857142857143,
+      "n_fraud_transactions": 5,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.6666666666666666,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.6666666666666666,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.6666666666666666,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.6666666666666666,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.6666666666666666,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.6666666666666666,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.6666666666666666,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 16,
+      "n_transactions": 16,
+      "proxy_fraud_rate": 0.5625,
+      "n_fraud_transactions": 9,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 9,
+      "n_transactions": 9,
+      "proxy_fraud_rate": 0.5555555555555556,
+      "n_fraud_transactions": 5,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 15,
+      "n_transactions": 15,
+      "proxy_fraud_rate": 0.5333333333333333,
+      "n_fraud_transactions": 8,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.5,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 10,
+      "n_transactions": 10,
+      "proxy_fraud_rate": 0.5,
+      "n_fraud_transactions": 5,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.5,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 8,
+      "n_transactions": 8,
+      "proxy_fraud_rate": 0.5,
+      "n_fraud_transactions": 4,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 8,
+      "n_transactions": 8,
+      "proxy_fraud_rate": 0.5,
+      "n_fraud_transactions": 4,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 10,
+      "n_transactions": 10,
+      "proxy_fraud_rate": 0.5,
+      "n_fraud_transactions": 5,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.5,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.5,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 8,
+      "n_transactions": 8,
+      "proxy_fraud_rate": 0.5,
+      "n_fraud_transactions": 4,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.5,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.5,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.5,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.5,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.5,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 13,
+      "n_transactions": 13,
+      "proxy_fraud_rate": 0.46153846153846156,
+      "n_fraud_transactions": 6,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.45454545454545453,
+      "n_fraud_transactions": 5,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.45454545454545453,
+      "n_fraud_transactions": 5,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.42857142857142855,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.42857142857142855,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.4,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 10,
+      "proxy_fraud_rate": 0.4,
+      "n_fraud_transactions": 4,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.4,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 13,
+      "n_transactions": 13,
+      "proxy_fraud_rate": 0.38461538461538464,
+      "n_fraud_transactions": 5,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 9,
+      "n_transactions": 14,
+      "proxy_fraud_rate": 0.35714285714285715,
+      "n_fraud_transactions": 5,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 17,
+      "n_transactions": 17,
+      "proxy_fraud_rate": 0.35294117647058826,
+      "n_fraud_transactions": 6,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 9,
+      "proxy_fraud_rate": 0.3333333333333333,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.3333333333333333,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.3333333333333333,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.3333333333333333,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.3333333333333333,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.3333333333333333,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.3333333333333333,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.3333333333333333,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.3333333333333333,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 19,
+      "n_transactions": 19,
+      "proxy_fraud_rate": 0.3157894736842105,
+      "n_fraud_transactions": 6,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 10,
+      "n_transactions": 10,
+      "proxy_fraud_rate": 0.3,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 24,
+      "proxy_fraud_rate": 0.2916666666666667,
+      "n_fraud_transactions": 7,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.2857142857142857,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.2857142857142857,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.2857142857142857,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.2857142857142857,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 14,
+      "proxy_fraud_rate": 0.2857142857142857,
+      "n_fraud_transactions": 4,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 119,
+      "proxy_fraud_rate": 0.2773109243697479,
+      "n_fraud_transactions": 33,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.2727272727272727,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 15,
+      "n_transactions": 15,
+      "proxy_fraud_rate": 0.26666666666666666,
+      "n_fraud_transactions": 4,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 8,
+      "n_transactions": 8,
+      "proxy_fraud_rate": 0.25,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.25,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 12,
+      "n_transactions": 12,
+      "proxy_fraud_rate": 0.25,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 12,
+      "n_transactions": 12,
+      "proxy_fraud_rate": 0.25,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.25,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.25,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 13,
+      "n_transactions": 13,
+      "proxy_fraud_rate": 0.23076923076923078,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 13,
+      "n_transactions": 13,
+      "proxy_fraud_rate": 0.23076923076923078,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 10,
+      "n_transactions": 18,
+      "proxy_fraud_rate": 0.2222222222222222,
+      "n_fraud_transactions": 4,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 19,
+      "n_transactions": 19,
+      "proxy_fraud_rate": 0.21052631578947367,
+      "n_fraud_transactions": 4,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 20,
+      "n_transactions": 20,
+      "proxy_fraud_rate": 0.2,
+      "n_fraud_transactions": 4,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.2,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 8,
+      "n_transactions": 10,
+      "proxy_fraud_rate": 0.2,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.2,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 10,
+      "n_transactions": 10,
+      "proxy_fraud_rate": 0.2,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 20,
+      "n_transactions": 20,
+      "proxy_fraud_rate": 0.2,
+      "n_fraud_transactions": 4,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.2,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.18181818181818182,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.18181818181818182,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.16666666666666666,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.16666666666666666,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.16666666666666666,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.16666666666666666,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 20,
+      "n_transactions": 20,
+      "proxy_fraud_rate": 0.15,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.14285714285714285,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.14285714285714285,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.14285714285714285,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 45,
+      "proxy_fraud_rate": 0.13333333333333333,
+      "n_fraud_transactions": 6,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 16,
+      "n_transactions": 16,
+      "proxy_fraud_rate": 0.125,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 8,
+      "n_transactions": 8,
+      "proxy_fraud_rate": 0.125,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 16,
+      "n_transactions": 16,
+      "proxy_fraud_rate": 0.125,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 8,
+      "n_transactions": 8,
+      "proxy_fraud_rate": 0.125,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 16,
+      "n_transactions": 16,
+      "proxy_fraud_rate": 0.125,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 9,
+      "n_transactions": 9,
+      "proxy_fraud_rate": 0.1111111111111111,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 18,
+      "n_transactions": 18,
+      "proxy_fraud_rate": 0.1111111111111111,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 18,
+      "n_transactions": 18,
+      "proxy_fraud_rate": 0.1111111111111111,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 19,
+      "n_transactions": 19,
+      "proxy_fraud_rate": 0.10526315789473684,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 10,
+      "proxy_fraud_rate": 0.1,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 10,
+      "n_transactions": 10,
+      "proxy_fraud_rate": 0.1,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 44,
+      "proxy_fraud_rate": 0.09090909090909091,
+      "n_fraud_transactions": 4,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.09090909090909091,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 12,
+      "n_transactions": 12,
+      "proxy_fraud_rate": 0.08333333333333333,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 12,
+      "n_transactions": 12,
+      "proxy_fraud_rate": 0.08333333333333333,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 13,
+      "n_transactions": 13,
+      "proxy_fraud_rate": 0.07692307692307693,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 14,
+      "proxy_fraud_rate": 0.07142857142857142,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 14,
+      "n_transactions": 14,
+      "proxy_fraud_rate": 0.07142857142857142,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 261,
+      "proxy_fraud_rate": 0.06513409961685823,
+      "n_fraud_transactions": 17,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 16,
+      "n_transactions": 16,
+      "proxy_fraud_rate": 0.0625,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 16,
+      "n_transactions": 48,
+      "proxy_fraud_rate": 0.0625,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 16,
+      "n_transactions": 16,
+      "proxy_fraud_rate": 0.0625,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 17,
+      "n_transactions": 17,
+      "proxy_fraud_rate": 0.058823529411764705,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 20,
+      "n_transactions": 20,
+      "proxy_fraud_rate": 0.05,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 126,
+      "proxy_fraud_rate": 0.03968253968253968,
+      "n_fraud_transactions": 5,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 36,
+      "proxy_fraud_rate": 0.027777777777777776,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 582,
+      "proxy_fraud_rate": 0.027491408934707903,
+      "n_fraud_transactions": 16,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 42,
+      "proxy_fraud_rate": 0.023809523809523808,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 129,
+      "proxy_fraud_rate": 0.023255813953488372,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 390,
+      "proxy_fraud_rate": 0.007692307692307693,
+      "n_fraud_transactions": 3,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 141,
+      "proxy_fraud_rate": 0.0070921985815602835,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 377,
+      "proxy_fraud_rate": 0.005305039787798408,
+      "n_fraud_transactions": 2,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 248,
+      "proxy_fraud_rate": 0.004032258064516129,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 266,
+      "proxy_fraud_rate": 0.0037593984962406013,
+      "n_fraud_transactions": 1,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 13,
+      "n_transactions": 13,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 13,
+      "n_transactions": 13,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 77,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 30,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 13,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 17,
+      "n_transactions": 17,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 9,
+      "n_transactions": 10,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 18,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 10,
+      "n_transactions": 10,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 14,
+      "n_transactions": 14,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 12,
+      "n_transactions": 12,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 16,
+      "n_transactions": 16,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 18,
+      "n_transactions": 18,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 9,
+      "n_transactions": 9,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 68,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 20,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 14,
+      "n_transactions": 17,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 14,
+      "n_transactions": 14,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 16,
+      "n_transactions": 16,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 14,
+      "n_transactions": 17,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 23,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 15,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 18,
+      "n_transactions": 18,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 8,
+      "n_transactions": 8,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 67,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 8,
+      "n_transactions": 8,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 8,
+      "n_transactions": 8,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 13,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 14,
+      "n_transactions": 14,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 9,
+      "n_transactions": 9,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 14,
+      "n_transactions": 14,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 18,
+      "n_transactions": 18,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 9,
+      "n_transactions": 9,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 14,
+      "n_transactions": 14,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 8,
+      "n_transactions": 8,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 25,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 55,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 13,
+      "n_transactions": 13,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 9,
+      "n_transactions": 9,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 16,
+      "n_transactions": 16,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 135,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 8,
+      "n_transactions": 8,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 10,
+      "n_transactions": 10,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 115,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 20,
+      "n_transactions": 20,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 203,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 11,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 10,
+      "n_transactions": 10,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 8,
+      "n_transactions": 8,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 6,
+      "n_transactions": 6,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 2,
+      "n_transactions": 2,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 3,
+      "n_transactions": 3,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    },
+    {
+      "n_entities": 4,
+      "n_transactions": 4,
+      "proxy_fraud_rate": 0.0,
+      "n_fraud_transactions": 0,
+      "caveat": "proxy fraud rate is NOT verified ground truth, a derived signal only"
+    }
+  ]
+}
