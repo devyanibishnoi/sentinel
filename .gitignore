@@ -2,3 +2,5 @@ CLAUDE.md
 MYLEARNINGS.md
 data/
 .venv/
+__pycache__/
+*.pyc
