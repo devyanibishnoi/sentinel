@@ -3,36 +3,46 @@
 An entity's transactions stay entirely in one split, never spread across
 splits, see docs/03_DATA_AND_EVALUATION.md and CLAUDE.md's own leakage
 example for why this is non-negotiable.
+
+Time-based, not random: entities are ordered by their EARLIEST
+transaction, train gets the earliest-appearing entities, val the next
+chunk, test the latest-appearing entities. This simulates real
+deployment, train on the past, test on genuinely new accounts that show
+up later, rather than a random split that could put two accounts from
+the exact same week on opposite sides for no principled reason.
+
+An entity is assigned to a split by when it FIRST appeared, even though
+some of its later transactions might technically fall inside another
+split's time window. That's an accepted tradeoff of keeping entity
+integrity (never splitting one entity's rows across splits), not a
+leak, an entity's own future behavior is never used to build a
+DIFFERENT entity's features or the population model's parameters.
 """
 
 import pandas as pd
-from sklearn.model_selection import GroupShuffleSplit
 
 
 def add_split_column(
     transactions: pd.DataFrame,
     entity_col: str = "entity_id",
+    time_col: str = "TransactionDT",
     test_size: float = 0.2,
     val_size: float = 0.2,
-    random_state: int = 42,
 ) -> pd.DataFrame:
     transactions = transactions.copy()
-    groups = transactions[entity_col]
 
-    # Step 1: carve off the test split by entity.
-    test_splitter = GroupShuffleSplit(n_splits=1, test_size=test_size, random_state=random_state)
-    train_val_idx, test_idx = next(test_splitter.split(transactions, groups=groups))
+    first_seen = transactions.groupby(entity_col)[time_col].min().sort_values()
+    entities_ordered = first_seen.index
 
-    # Step 2: carve val out of what's left, still grouping by entity.
-    remainder = transactions.iloc[train_val_idx]
-    val_splitter = GroupShuffleSplit(n_splits=1, test_size=val_size, random_state=random_state)
-    train_idx, val_idx = next(
-        val_splitter.split(remainder, groups=remainder[entity_col])
-    )
+    n_entities = len(entities_ordered)
+    n_test = round(n_entities * test_size)
+    n_train_val = n_entities - n_test
+    n_val = round(n_train_val * val_size)
+    n_train = n_train_val - n_val
 
-    split = pd.Series("train", index=transactions.index)
-    split.iloc[test_idx] = "test"
-    split.iloc[train_val_idx[val_idx]] = "val"
-    transactions["split"] = split
+    split_by_entity = pd.Series("train", index=entities_ordered)
+    split_by_entity.iloc[n_train : n_train + n_val] = "val"
+    split_by_entity.iloc[n_train + n_val :] = "test"
 
+    transactions["split"] = transactions[entity_col].map(split_by_entity)
     return transactions
