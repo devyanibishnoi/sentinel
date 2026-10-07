@@ -105,3 +105,19 @@ Alternatives considered: and why not.
 **Consequences:** the demo stream can never accidentally leak into a reported metric, since the field exists specifically to make that mistake visible immediately, in the console's own display, if it ever happened. In exchange, the submission gets a platform-relevant, visually compelling demo without weakening the one claim that actually matters for the track's bar, the real, held-out, honestly-measured evaluation.
 
 **Alternatives considered:** skip the demo layer entirely and rely on the India-context grounding alone. Considered sufficient for narrative honesty, but weaker for a 5-minute video that benefits from something visibly running against the right shape of data, not just described in prose.
+
+---
+
+# ADR-0007 — Orchestrator decides on population score + ring membership, not score_combined
+
+**Status:** accepted · **Date:** 2026-10-07
+
+**Context:** The original `Detection` contract (Architecture §4) and TDS-5 assumed the Orchestrator's primary confidence signal would be `score_combined` (population + entity-deviation together), written before any model had actually been run. Since then, a full, repeated investigation (`docs/LEARNING_LOG.md`, the Days 2-3 and post-deadline rebuild entries) established, with three independent lines of evidence and no remaining confounds, that entity-deviation does not improve PR-AUC over population-only for this detector, population-only consistently wins, including when restricted specifically to accounts with transaction history. Separately, ring detection (TDS-4) was independently validated as real signal, five credible clusters at 100% proxy fraud rate against a ~4.6% baseline.
+
+**Decision:** the Orchestrator uses `score_population` (not `score_combined`) as its primary confidence input for the confidence gate, and treats ring membership (`ring_cluster_id` is set) as a second, independent, non-blended signal that can raise a detection's exposure to review/decline even when the population score alone wouldn't trigger it. `score_combined` and `score_entity_deviation` are still computed and stored on every `Detection` for transparency and the console's explain panel, just not used as the Orchestrator's decision driver. The typology tag rides along for human-readable explanation, not as a third scoring input.
+
+**Consequences:** the system's actual decision logic now matches what was empirically proven to work, rather than what was assumed to work before any evidence existed. Makes the Orchestrator's reasoning more defensible (every input it acts on has its own validated evidence behind it), at the cost of diverging from the Detection contract's original implied design intent. `score_entity_deviation`/`score_combined` remain visible for honesty and future re-evaluation (e.g. if the entity fingerprint or feature set improves further), they're demoted, not deleted.
+
+**Alternatives considered:**
+- *Keep using `score_combined` as specified* — rejected, would mean knowingly building the auto-responder's core logic around a signal already shown to underperform, purely for spec-fidelity, not defensible once the evidence existed.
+- *Blend ring membership into one combined score alongside population* — rejected for now, ring membership is a structurally different kind of evidence (graph connectivity, not a per-transaction feature), and keeping it as a separate, explicit gate is more explainable in the console later than burying it inside one opaque number.

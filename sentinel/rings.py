@@ -57,6 +57,17 @@ def find_clusters(graph: nx.Graph, min_size: int = 2, max_size: int = 50) -> lis
     return clusters
 
 
+def assign_cluster_ids(clusters: list[set[str]]) -> dict[str, str]:
+    """Flattens a list of clusters into {entity_id: cluster_label},
+    for attaching a ring_cluster_id to individual transactions."""
+    entity_to_cluster = {}
+    for i, cluster in enumerate(clusters):
+        label = f"ring_{i}"
+        for entity_id in cluster:
+            entity_to_cluster[entity_id] = label
+    return entity_to_cluster
+
+
 def score_cluster(cluster_entities: set[str], transactions: pd.DataFrame, entity_col: str = "entity_id") -> dict:
     """Proxy fraud rate for one cluster. NOT verified ground truth, this
     is a derived proxy label, say so wherever this is displayed."""

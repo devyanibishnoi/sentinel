@@ -118,6 +118,8 @@ class Orchestrator:
 
 **Core logic:** on a Detection, check confidence against `confidence_threshold` and exposure against `exposure_threshold`. Above confidence and below exposure, act autonomously (decline or allow per the specific rule that matched). Above exposure or below confidence, route to review rather than guess. Every call to `evaluate`, including ones that route to review, produces an `AuditRecord`, there is no code path that makes a decision without one.
 
+**Confidence input, concretely (see ADR-0007):** confidence is `score_population`, not `score_combined`. The entity-deviation lift was rigorously disproven (`docs/LEARNING_LOG.md`), so the Orchestrator doesn't lean on a signal already shown not to help. Ring membership (`ring_cluster_id` is set, from TDS-4) acts as a second, independent trigger, not blended into the confidence number, if an entity is in a validated ring cluster, that alone can push the decision toward decline/review even at a population score that wouldn't trigger on its own, since ring membership was independently validated as real signal (five clusters at 100% proxy fraud rate). The typology tag (TDS-3) attaches for human-readable explanation, it does not feed the gate math.
+
 **Open questions:** whether `exposure_threshold` should scale with the entity's own typical transaction size rather than being a flat cutoff, worth testing empirically once real score distributions exist.
 
 ---
