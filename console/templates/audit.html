@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Audit Trail</h1>
+<div class="caveat">
+  Every decision, including every refusal to act (<span class="badge badge-allow">allow</span>), is logged here, no code
+  path skips it. Page {{ page }} of {{ total_pages }} ({{ total }} total records).
+</div>
+<table>
+  <thead><tr><th>Transaction</th><th>Entity</th><th>Score (pop.)</th><th>Amount</th><th>Decision</th><th>Reasoning</th></tr></thead>
+  <tbody>
+  {% for r in records %}
+    <tr>
+      <td class="muted">{{ r.transaction_id }}</td>
+      <td class="muted">{{ r.entity_id[:20] }}&hellip;</td>
+      <td>{{ "%.3f"|format(r.score_population) }}</td>
+      <td>&#8377;{{ "%.2f"|format(r.transaction_amount) }}</td>
+      <td><span class="badge badge-{{ r.decision }}">{{ r.decision }}</span></td>
+      <td class="muted">{{ r.reasoning }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<div style="margin-top:1.5rem;">
+  {% if page > 1 %}<a href="/audit?page={{ page - 1 }}">&larr; prev</a>{% endif %}
+  &nbsp;&nbsp;
+  {% if page < total_pages %}<a href="/audit?page={{ page + 1 }}">next &rarr;</a>{% endif %}
+</div>
+{% endblock %}

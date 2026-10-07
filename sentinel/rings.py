@@ -68,6 +68,27 @@ def assign_cluster_ids(clusters: list[set[str]]) -> dict[str, str]:
     return entity_to_cluster
 
 
+def find_credible_rings(
+    clusters: list[set[str]],
+    transactions: pd.DataFrame,
+    entity_col: str = "entity_id",
+    min_transactions: int = 5,
+    min_fraud_rate_multiple: float = 3.0,
+) -> list[dict]:
+    """The one shared definition of 'credible ring', used everywhere a
+    ring gets acted on or displayed (Day 5's auto-responder bug: size
+    alone isn't suspicion, a cluster also needs an actually-elevated
+    fraud rate, not just enough samples to trust the measurement)."""
+    overall_fraud_rate = float(transactions["isFraud"].mean())
+    scored = [score_cluster(c, transactions, entity_col) | {"entities": c} for c in clusters]
+    return [
+        c
+        for c in scored
+        if c["n_transactions"] >= min_transactions
+        and c["proxy_fraud_rate"] >= overall_fraud_rate * min_fraud_rate_multiple
+    ]
+
+
 def score_cluster(cluster_entities: set[str], transactions: pd.DataFrame, entity_col: str = "entity_id") -> dict:
     """Proxy fraud rate for one cluster. NOT verified ground truth, this
     is a derived proxy label, say so wherever this is displayed."""

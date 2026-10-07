@@ -16,7 +16,7 @@ from sentinel.baselines import add_entity_prior_stats
 from sentinel.entities import add_entity_id
 from sentinel.features import FeaturePipeline
 from sentinel.responder import Orchestrator, Playbook
-from sentinel.rings import assign_cluster_ids, build_fingerprint_graph, find_clusters, score_cluster
+from sentinel.rings import assign_cluster_ids, build_fingerprint_graph, find_clusters, find_credible_rings
 from sentinel.splitting import add_split_column
 from sentinel.typology import add_typology_tag
 
@@ -63,25 +63,12 @@ print("checkpoint: scored test with combined_model", flush=True)
 # actually elevated above baseline (size alone says nothing about whether
 # it's suspicious, a big cluster at ordinary fraud rate is just a popular
 # device, not a ring). ----
-overall_fraud_rate = float(test["isFraud"].mean())
-RING_MIN_TRANSACTIONS = 5
-RING_MIN_FRAUD_RATE_MULTIPLE = 3.0
-
 graph = build_fingerprint_graph(test, fingerprint_col="DeviceInfo", min_entities_per_fingerprint=2, max_entities_per_fingerprint=20)
 all_clusters = find_clusters(graph, min_size=2, max_size=50)
-scored_clusters = [score_cluster(c, test) | {"entities": c} for c in all_clusters]
-credible_clusters = [
-    c["entities"]
-    for c in scored_clusters
-    if c["n_transactions"] >= RING_MIN_TRANSACTIONS
-    and c["proxy_fraud_rate"] >= overall_fraud_rate * RING_MIN_FRAUD_RATE_MULTIPLE
-]
-print(f"clusters passing size filter only (5+ txns): "
-      f"{sum(1 for c in scored_clusters if c['n_transactions'] >= RING_MIN_TRANSACTIONS)}")
-print(f"clusters passing BOTH size and fraud-rate-elevation filter "
-      f"(>= {RING_MIN_FRAUD_RATE_MULTIPLE}x baseline): {len(credible_clusters)}")
+credible = find_credible_rings(all_clusters, test)
+print(f"credible ring clusters (5+ txns AND >= 3x baseline fraud rate): {len(credible)}")
 
-entity_to_cluster = assign_cluster_ids(credible_clusters)
+entity_to_cluster = assign_cluster_ids([c["entities"] for c in credible])
 test["ring_cluster_id"] = test["entity_id"].map(entity_to_cluster)
 # Not fixing this with .where(..., None): pandas 3.0's string dtype can't
 # hold a literal None anyway (see sentinel/responder.py), the Orchestrator
@@ -96,7 +83,7 @@ confidence_threshold = float(pd.Series(val_score_population).quantile(0.98))
 exposure_threshold = float(train["TransactionAmt"].quantile(0.75))
 print(f"confidence_threshold (98th pct of val population score): {confidence_threshold:.4f}")
 print(f"exposure_threshold (75th pct of train TransactionAmt): {exposure_threshold:.2f}")
-print(f"credible ring clusters feeding the gate: {len(credible_clusters)}")
+print(f"credible ring clusters feeding the gate: {len(credible)}")
 print()
 
 # ---- 5. Run the Orchestrator over EVERY test row. ----
@@ -131,3 +118,51 @@ for action in ["decline", "review", "allow"]:
 Path("results").mkdir(exist_ok=True)
 audit_df.to_csv("results/day5_audit_log.csv", index=False)
 print("\nsaved to results/day5_audit_log.csv")
+
+# ---- The results store the console reads from (Architecture §3): every
+# field a Detection needs, the decision that was made, and the ground
+# truth label for the metrics view. source is always "benchmark" here,
+# never mixed with the (not yet built) demo stream. ----
+detections = test[
+    ["TransactionID", "entity_id", "TransactionDT", "TransactionAmt",
+     "score_population", "score_entity_deviation", "score_combined",
+     "typology_tag", "ring_cluster_id", "isFraud"]
+].copy()
+detections["TransactionID"] = detections["TransactionID"].astype(str)
+detections = detections.merge(
+    audit_df.rename(columns={"transaction_id": "TransactionID"})[["TransactionID", "decision", "reasoning"]],
+    on="TransactionID",
+    how="left",
+)
+detections["source"] = "benchmark"
+detections = detections.rename(columns={"isFraud": "ground_truth_fraud", "reasoning": "decision_reasoning"})
+
+detections.to_csv("results/detections.csv", index=False)
+print(f"saved {len(detections)} rows to results/detections.csv (the console's results store)")
+
+# ---- Ring viewer data: for each credible cluster, the entities AND the
+# shared-device edges connecting them, so the console can actually draw
+# the graph instead of just listing entity ids. ----
+import json as _json  # local import, keeping the top of the file's import list focused on what Day 5 itself needed
+
+ring_clusters = []
+label_to_entities = {f"ring_{i}": c["entities"] for i, c in enumerate(credible)}
+for label, entities in label_to_entities.items():
+    cluster_rows = test[test["entity_id"].isin(entities) & test["DeviceInfo"].notna()]
+    edges = cluster_rows[["entity_id", "DeviceInfo"]].drop_duplicates().to_dict(orient="records")
+    cluster_stats = next(c for c in credible if c["entities"] == entities)
+    ring_clusters.append({
+        "cluster_id": label,
+        "entities": sorted(entities),
+        "n_entities": cluster_stats["n_entities"],
+        "n_transactions": cluster_stats["n_transactions"],
+        "proxy_fraud_rate": cluster_stats["proxy_fraud_rate"],
+        "edges": edges,
+    })
+
+with open("results/ring_clusters.json", "w") as f:
+    _json.dump({
+        "caveat": "proxy_fraud_rate is a DERIVED PROXY, not verified ground truth",
+        "clusters": ring_clusters,
+    }, f, indent=2)
+print(f"saved {len(ring_clusters)} ring clusters to results/ring_clusters.json")

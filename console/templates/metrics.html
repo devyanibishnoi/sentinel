@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Metrics</h1>
+<div class="caveat">
+  Every number below comes from the held-out <strong>BENCHMARK</strong> test split only. The demo stream never contributes to a reported metric.
+</div>
+
+<h2>Detector vs. all four baselines, same metric (PR-AUC)</h2>
+<table>
+  <thead><tr><th>Method</th><th>PR-AUC (full test)</th><th>PR-AUC (has-history only)</th></tr></thead>
+  <tbody>
+  {% for r in comparison %}
+    <tr>
+      <td>{{ r.method }}</td>
+      <td>{{ "%.4f"|format(r.pr_auc_full_test) }}</td>
+      <td>{{ "%.4f"|format(r.pr_auc_has_history_only) }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+<h2>The entity-vs-population lift, and why it's not positive</h2>
+<div class="metric-grid">
+  <div class="metric"><div class="value">{{ "%.1f"|format(has_history_share*100) }}%</div><div class="label">test rows with any entity history</div></div>
+  {% if history_diag %}
+  <div class="metric"><div class="value">{{ history_diag.median_prior_count_among_has_history|int }}</div><div class="label">median prior transactions (has-history rows)</div></div>
+  <div class="metric"><div class="value">{{ "%.1f"|format(history_diag.exactly_one_prior_share_of_has_history*100) }}%</div><div class="label">has-history rows with only 1 prior (no std computable)</div></div>
+  {% endif %}
+</div>
+<p class="muted">
+  Entity-deviation does not improve PR-AUC over population-only, confirmed even restricted to has-history rows.
+  Root cause: most account histories in this slice of data are too thin to baseline against. Full investigation in
+  <code>docs/LEARNING_LOG.md</code>, decision recorded in <code>docs/ADR_LOG.md</code> (ADR-0007).
+</p>
+
+<h2>Day 1 baselines, population and entity level</h2>
+<table>
+  <thead><tr><th>Baseline</th><th>Precision</th><th>Recall</th><th>FPR</th></tr></thead>
+  <tbody>
+  {% for b in baselines %}
+    <tr>
+      <td>{{ b.baseline }}</td>
+      <td>{{ "%.4f"|format(b.precision) }}</td>
+      <td>{{ "%.4f"|format(b.recall) }}</td>
+      <td>{{ "%.4f"|format(b.fpr) }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

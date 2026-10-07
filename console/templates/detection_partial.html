@@ -1,0 +1,15 @@
+<div class="card">
+  <h3 style="margin-top:0;">Detection {{ d.TransactionID }}</h3>
+  <table>
+    <tr><td>Entity</td><td class="muted">{{ d.entity_id }}</td></tr>
+    <tr><td>Amount</td><td>&#8377;{{ "%.2f"|format(d.TransactionAmt) }}</td></tr>
+    <tr><td>Population score</td><td><strong>{{ "%.4f"|format(d.score_population) }}</strong> <span class="muted">drives the decision (ADR-0007)</span></td></tr>
+    <tr><td>Entity-deviation score</td><td>{{ "%.4f"|format(d.score_entity_deviation) }} <span class="muted">shown for transparency only, not used</span></td></tr>
+    <tr><td>Combined score</td><td>{{ "%.4f"|format(d.score_combined) }} <span class="muted">shown for transparency only, not used</span></td></tr>
+    <tr><td>Typology tag</td><td>{% if d.typology_tag %}{{ d.typology_tag }}{% else %}<span class="muted">none</span>{% endif %}</td></tr>
+    <tr><td>Ring cluster</td><td>{% if d.ring_cluster_id %}<a href="/ring/{{ d.ring_cluster_id }}">{{ d.ring_cluster_id }}</a>{% else %}<span class="muted">none</span>{% endif %}</td></tr>
+    <tr><td>Decision</td><td><span class="badge badge-{{ d.decision }}">{{ d.decision }}</span></td></tr>
+    <tr><td>Reasoning</td><td>{{ d.decision_reasoning }}</td></tr>
+    <tr><td>Ground truth</td><td>{{ "fraud" if d.ground_truth_fraud == 1 else "benign" }} <span class="muted">(evaluation only, the detector never sees this)</span></td></tr>
+  </table>
+</div>

@@ -12,7 +12,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from sentinel.entities import add_entity_id
-from sentinel.rings import build_fingerprint_graph, find_clusters, score_cluster
+from sentinel.rings import build_fingerprint_graph, find_clusters, find_credible_rings, score_cluster
 from sentinel.splitting import add_split_column
 
 transactions = pd.read_csv("data/raw/train_transaction.csv")
@@ -57,8 +57,12 @@ for c in scored[:10]:
     )
 
 print()
-credible = [c for c in scored if c["n_transactions"] >= 5]
-print(f"top 5 clusters by proxy fraud rate, restricted to n_transactions >= 5 (more statistically credible):")
+# The one shared "credible ring" definition (sentinel.rings.find_credible_rings):
+# size alone isn't suspicion, also requires fraud rate >= 3x baseline, same
+# standard the auto-responder gates on (Day 5's own bug taught us this).
+credible = find_credible_rings(clusters, test)
+credible.sort(key=lambda c: c["proxy_fraud_rate"], reverse=True)
+print(f"credible clusters (5+ txns AND >= 3x baseline fraud rate): {len(credible)}")
 for c in credible[:5]:
     print(
         f"  entities={c['n_entities']:3d}  transactions={c['n_transactions']:4d}  "
@@ -78,6 +82,7 @@ with open("results/day3_4_ring_detection.json", "w") as f:
             "n_oversized_components_excluded": n_oversized,
             "n_clusters_found": len(clusters),
             "clusters": scored,
+            "credible_rings": [{k: v for k, v in c.items() if k != "entities"} for c in credible],
         },
         f,
         indent=2,

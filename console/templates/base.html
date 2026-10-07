@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sentinel Risk Console</title>
+<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 0; background: #0f1115; color: #e6e6e6; }
+  nav { background: #1a1d24; padding: 1rem 2rem; display: flex; gap: 1.5rem; border-bottom: 1px solid #2a2d36; }
+  nav a { color: #9aa0ad; text-decoration: none; font-weight: 500; }
+  nav a:hover { color: #fff; }
+  main { padding: 2rem; max-width: 1150px; margin: 0 auto; }
+  table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+  th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid #2a2d36; font-size: 0.9rem; }
+  th { color: #9aa0ad; font-weight: 600; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.03em; }
+  .badge { padding: 0.15rem 0.55rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
+  .badge-benchmark { background: #1e3a2f; color: #4ade80; }
+  .badge-demo { background: #3a2e1e; color: #facc15; }
+  .badge-decline { background: #3a1e1e; color: #f87171; }
+  .badge-review { background: #3a331e; color: #fbbf24; }
+  .badge-allow { background: #1e2e3a; color: #60a5fa; }
+  .caveat { background: #2a1f14; border: 1px solid #5c3d1f; color: #f0b86e; padding: 0.75rem 1rem; border-radius: 6px; font-size: 0.85rem; margin-bottom: 1rem; }
+  .card { background: #1a1d24; border: 1px solid #2a2d36; border-radius: 8px; padding: 1.5rem; }
+  .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; margin: 1rem 0 1.5rem; }
+  .metric { background: #1a1d24; border: 1px solid #2a2d36; border-radius: 8px; padding: 1rem; }
+  .metric .value { font-size: 1.6rem; font-weight: 700; }
+  .metric .label { color: #9aa0ad; font-size: 0.78rem; margin-top: 0.25rem; }
+  tr.clickable:hover { background: #20242c; cursor: pointer; }
+  h1 { margin-top: 0; }
+  h2 { margin-top: 2rem; font-size: 1.1rem; color: #cbd1db; }
+  .muted { color: #9aa0ad; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/">Detection Feed</a>
+  <a href="/metrics">Metrics</a>
+  <a href="/ring">Ring Viewer</a>
+  <a href="/audit">Audit Trail</a>
+</nav>
+<main>
+{% block content %}{% endblock %}
+</main>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Ring Viewer</h1>
+<div class="caveat">
+  Proxy fraud rate is a <strong>DERIVED PROXY LABEL</strong>, not verified ground truth. A cluster only appears here
+  if it passed both checks: statistically credible size (5+ transactions) AND a fraud rate at least 3x the overall
+  baseline, size alone is not suspicion (see docs/LEARNING_LOG.md, Day 5).
+</div>
+<table>
+  <thead><tr><th>Cluster</th><th>Entities</th><th>Transactions</th><th>Proxy fraud rate</th></tr></thead>
+  <tbody>
+  {% for c in clusters %}
+    <tr class="clickable" onclick="window.location='/ring/{{ c.cluster_id }}'">
+      <td>{{ c.cluster_id }}</td>
+      <td>{{ c.n_entities }}</td>
+      <td>{{ c.n_transactions }}</td>
+      <td>{{ "%.1f"|format(c.proxy_fraud_rate*100) }}%</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

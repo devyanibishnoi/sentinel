@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Detection Feed</h1>
+<div class="caveat">
+  Showing flagged detections (decline/review) from the <strong>BENCHMARK</strong> (held-out test) stream only.
+  {{ flagged_total }} of {{ total }} total detections were flagged. Source is always shown, never mixed with a demo stream.
+</div>
+<div style="display:flex; gap:1.5rem; align-items:flex-start;">
+  <div style="flex: 1.4;">
+    <table>
+      <thead><tr><th>Entity</th><th>Score (pop.)</th><th>Amount</th><th>Decision</th><th>Typology</th><th>Ring</th><th>Source</th></tr></thead>
+      <tbody>
+      {% for d in detections %}
+        <tr class="clickable" hx-get="/detection/{{ d.TransactionID }}" hx-target="#explain-panel" hx-swap="innerHTML">
+          <td class="muted">{{ d.entity_id[:22] }}&hellip;</td>
+          <td>{{ "%.3f"|format(d.score_population) }}</td>
+          <td>&#8377;{{ "%.2f"|format(d.TransactionAmt) }}</td>
+          <td><span class="badge badge-{{ d.decision }}">{{ d.decision }}</span></td>
+          <td class="muted">{% if d.typology_tag %}{{ d.typology_tag }}{% else %}&ndash;{% endif %}</td>
+          <td>{% if d.ring_cluster_id %}<a href="/ring/{{ d.ring_cluster_id }}">{{ d.ring_cluster_id }}</a>{% else %}&ndash;{% endif %}</td>
+          <td><span class="badge badge-{{ d.source }}">{{ d.source }}</span></td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div id="explain-panel" style="flex: 1; min-width: 300px; position: sticky; top: 1rem;">
+    <div class="card muted">Click a detection row to see why it was flagged.</div>
+  </div>
+</div>
+{% endblock %}
