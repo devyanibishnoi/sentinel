@@ -10,6 +10,11 @@
     <tr><td>Ring cluster</td><td>{% if d.ring_cluster_id %}<a href="/ring/{{ d.ring_cluster_id }}">{{ d.ring_cluster_id }}</a>{% else %}<span class="muted">none</span>{% endif %}</td></tr>
     <tr><td>Decision</td><td><span class="badge badge-{{ d.decision }}">{{ d.decision }}</span></td></tr>
     <tr><td>Reasoning</td><td>{{ d.decision_reasoning }}</td></tr>
-    <tr><td>Ground truth</td><td>{{ "fraud" if d.ground_truth_fraud == 1 else "benign" }} <span class="muted">(evaluation only, the detector never sees this)</span></td></tr>
+    <tr><td>Ground truth</td><td>
+      {% if d.ground_truth_fraud is none %}<span class="muted">no ground truth (synthetic demo data)</span>
+      {% elif d.ground_truth_fraud == 1 %}fraud <span class="muted">(evaluation only, the detector never sees this)</span>
+      {% else %}benign <span class="muted">(evaluation only, the detector never sees this)</span>
+      {% endif %}
+    </td></tr>
   </table>
 </div>

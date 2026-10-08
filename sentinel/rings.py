@@ -89,6 +89,39 @@ def find_credible_rings(
     ]
 
 
+def find_credible_rings_live(
+    clusters: list[set[str]],
+    scored_transactions: pd.DataFrame,
+    entity_col: str = "entity_id",
+    score_col: str = "score_population",
+) -> list[dict]:
+    """Label-free scoring for clusters found on data with no ground
+    truth (a live/demo stream, a real deployed system never knows a
+    brand-new cluster's true fraud rate the moment it's spotted, that's
+    only checkable on an already-labeled benchmark). Unlike
+    find_credible_rings (which filters by fraud-rate elevation, only
+    possible with labels), this does NOT exclude clusters by score.
+    Structural bounds already guard against the two known
+    false-positive modes (a too-generic fingerprint,
+    max_entities_per_fingerprint in build_fingerprint_graph; and
+    connected-component chaining, max_size in find_clusters). An
+    earlier version of this function DID filter by population-score
+    agreement and it silently excluded a deliberately-planted test
+    ring built from normal-looking amounts, exactly the kind of ring a
+    real fraud operation would construct to evade amount-based
+    detection, see docs/LEARNING_LOG.md. The average score is still
+    attached, as corroborating evidence for a human reviewer, not as a
+    gate."""
+    results = []
+    for cluster in clusters:
+        stats = score_cluster(cluster, scored_transactions, entity_col)
+        stats["entities"] = cluster
+        cluster_rows = scored_transactions[scored_transactions[entity_col].isin(cluster)]
+        stats["avg_population_score"] = float(cluster_rows[score_col].mean())
+        results.append(stats)
+    return results
+
+
 def score_cluster(cluster_entities: set[str], transactions: pd.DataFrame, entity_col: str = "entity_id") -> dict:
     """Proxy fraud rate for one cluster. NOT verified ground truth, this
     is a derived proxy label, say so wherever this is displayed."""

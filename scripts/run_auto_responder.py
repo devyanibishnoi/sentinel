@@ -7,14 +7,13 @@ import sys
 import time
 from pathlib import Path
 
+import joblib
 import pandas as pd
-from sklearn.ensemble import IsolationForest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from sentinel.baselines import add_entity_prior_stats
 from sentinel.entities import add_entity_id
-from sentinel.features import FeaturePipeline
 from sentinel.responder import Orchestrator, Playbook
 from sentinel.rings import assign_cluster_ids, build_fingerprint_graph, find_clusters, find_credible_rings
 from sentinel.splitting import add_split_column
@@ -35,28 +34,21 @@ transactions = transactions.merge(identity, on="TransactionID", how="left")
 print("checkpoint: merged identity", flush=True)
 
 train = transactions[transactions["split"] == "train"]
-val = transactions[transactions["split"] == "val"]
 test = transactions[transactions["split"] == "test"].copy()
 
 # ---- 1. Scores: score_population drives the gate (ADR-0007). score_combined
-# and score_entity_deviation are kept for transparency, not used to decide. ----
-pipeline = FeaturePipeline().fit(train)
-print("checkpoint: fitted feature pipeline", flush=True)
+# and score_entity_deviation are kept for transparency, not used to decide.
+# Loaded, never re-fit here, scripts/fit_pipeline.py is the one place that
+# trains anything (Architecture §2: "never retrains" on anything but train). ----
+pipeline = joblib.load("models/feature_pipeline.joblib")
+pop_model = joblib.load("models/pop_model.joblib")
+combined_model = joblib.load("models/combined_model.joblib")
+print("checkpoint: loaded persisted pipeline + models", flush=True)
 
-X_train_pop = pipeline.transform(train, include_entity=False)
-print(f"checkpoint: built X_train_pop, shape={X_train_pop.shape}", flush=True)
-pop_model = IsolationForest(n_estimators=200, contamination="auto", random_state=42, n_jobs=-1).fit(X_train_pop)
-print("checkpoint: fitted pop_model", flush=True)
-val_score_population = -pop_model.score_samples(pipeline.transform(val, include_entity=False))
 test["score_population"] = -pop_model.score_samples(pipeline.transform(test, include_entity=False))
-print("checkpoint: scored val/test with pop_model", flush=True)
-
-X_train_combined = pipeline.transform(train, include_entity=True)
-combined_model = IsolationForest(n_estimators=200, contamination="auto", random_state=42, n_jobs=-1).fit(X_train_combined)
-print("checkpoint: fitted combined_model", flush=True)
 test["score_combined"] = -combined_model.score_samples(pipeline.transform(test, include_entity=True))
 test["score_entity_deviation"] = test["score_combined"] - test["score_population"]
-print("checkpoint: scored test with combined_model", flush=True)
+print("checkpoint: scored test with both models", flush=True)
 
 # ---- 2. Ring membership: a cluster only counts as a trigger if it is BOTH
 # statistically credible (5+ transactions, not a 2-sample coincidence) AND
@@ -78,11 +70,13 @@ test["ring_cluster_id"] = test["entity_id"].map(entity_to_cluster)
 # ---- 3. Typology tag, explanation only, not a gate input. ----
 test = add_typology_tag(test)
 
-# ---- 4. Thresholds, chosen on VAL/TRAIN, never on test. ----
-confidence_threshold = float(pd.Series(val_score_population).quantile(0.98))
-exposure_threshold = float(train["TransactionAmt"].quantile(0.75))
-print(f"confidence_threshold (98th pct of val population score): {confidence_threshold:.4f}")
-print(f"exposure_threshold (75th pct of train TransactionAmt): {exposure_threshold:.2f}")
+# ---- 4. Thresholds, loaded from fit_pipeline.py (chosen on VAL/TRAIN,
+# never on test, calibrated once, reused everywhere). ----
+thresholds = joblib.load("models/playbook_thresholds.joblib")
+confidence_threshold = thresholds["confidence_threshold"]
+exposure_threshold = thresholds["exposure_threshold"]
+print(f"confidence_threshold (loaded): {confidence_threshold:.4f}")
+print(f"exposure_threshold (loaded): {exposure_threshold:.2f}")
 print(f"credible ring clusters feeding the gate: {len(credible)}")
 print()
 

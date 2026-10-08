@@ -3,6 +3,11 @@
 Every route reads from the results store (results/) and renders. No
 route computes a score, trains anything, or mutates pipeline state, a
 console bug can't produce a wrong number, since it never produces one.
+
+Benchmark vs demo (Day 8, Architecture §4): the detection feed and
+audit trail can be flipped between the two via a `source` query param.
+Metrics is ALWAYS benchmark-only, never a toggle, the demo stream must
+never contribute to a reported metric, full stop.
 """
 
 import json
@@ -31,10 +36,6 @@ def render(template_name: str, **context) -> HTMLResponse:
     return HTMLResponse(template.render(**context))
 
 
-def load_detections() -> pd.DataFrame:
-    return pd.read_csv(RESULTS / "detections.csv")
-
-
 def to_records(df: pd.DataFrame) -> list[dict]:
     """.to_dict() alone leaves missing values as NaN, not None, and NaN
     is truthy in Python (bool(float('nan')) is True), so {% if %} in a
@@ -43,21 +44,39 @@ def to_records(df: pd.DataFrame) -> list[dict]:
     return df.astype(object).where(pd.notna(df), None).to_dict(orient="records")
 
 
+def detections_file(source: str) -> Path:
+    if source not in ("benchmark", "demo"):
+        raise HTTPException(400, "source must be 'benchmark' or 'demo'")
+    return RESULTS / ("detections.csv" if source == "benchmark" else "demo_detections.csv")
+
+
+def audit_file(source: str) -> Path:
+    if source not in ("benchmark", "demo"):
+        raise HTTPException(400, "source must be 'benchmark' or 'demo'")
+    return RESULTS / ("day5_audit_log.csv" if source == "benchmark" else "demo_audit_log.csv")
+
+
 @app.get("/", response_class=HTMLResponse)
-def detection_feed():
-    df = load_detections()
-    flagged = df[df["decision"] != "allow"].sort_values("TransactionDT", ascending=False)
+def detection_feed(source: str = "benchmark"):
+    df = pd.read_csv(detections_file(source))
+    if source == "benchmark":
+        # 85k rows: show only what was actually flagged.
+        shown = df[df["decision"] != "allow"].sort_values("TransactionDT", ascending=False)
+    else:
+        # demo stream is small and illustrative: show everything, flagged or not.
+        shown = df.sort_values("TransactionDT", ascending=False)
     return render(
         "feed.html",
-        detections=to_records(flagged.head(200)),
+        detections=to_records(shown.head(200)),
         total=len(df),
-        flagged_total=len(flagged),
+        flagged_total=len(df[df["decision"] != "allow"]),
+        source=source,
     )
 
 
 @app.get("/detection/{transaction_id}", response_class=HTMLResponse)
-def explain_panel(transaction_id: str):
-    df = load_detections()
+def explain_panel(transaction_id: str, source: str = "benchmark"):
+    df = pd.read_csv(detections_file(source))
     match = df[df["TransactionID"].astype(str) == transaction_id]
     if match.empty:
         raise HTTPException(404, "detection not found")
@@ -78,19 +97,31 @@ def metrics_view():
     )
 
 
+def _load_all_ring_clusters() -> list[dict]:
+    clusters = []
+    for name, source in [("ring_clusters.json", "benchmark"), ("demo_ring_clusters.json", "demo")]:
+        path = RESULTS / name
+        if not path.exists():
+            continue
+        with open(path) as f:
+            data = json.load(f)
+        for c in data["clusters"]:
+            c = dict(c)
+            c["source"] = source
+            clusters.append(c)
+    return clusters
+
+
 @app.get("/ring", response_class=HTMLResponse)
 def ring_list():
-    with open(RESULTS / "ring_clusters.json") as f:
-        data = json.load(f)
-    clusters = sorted(data["clusters"], key=lambda c: c["proxy_fraud_rate"], reverse=True)
+    clusters = _load_all_ring_clusters()
+    clusters.sort(key=lambda c: c.get("proxy_fraud_rate") or c.get("avg_population_score") or 0, reverse=True)
     return render("ring_list.html", clusters=clusters)
 
 
 @app.get("/ring/{cluster_id}", response_class=HTMLResponse)
 def ring_viewer(cluster_id: str):
-    with open(RESULTS / "ring_clusters.json") as f:
-        data = json.load(f)
-    cluster = next((c for c in data["clusters"] if c["cluster_id"] == cluster_id), None)
+    cluster = next((c for c in _load_all_ring_clusters() if c["cluster_id"] == cluster_id), None)
     if cluster is None:
         raise HTTPException(404, "ring cluster not found")
 
@@ -115,8 +146,8 @@ def ring_viewer(cluster_id: str):
 
 
 @app.get("/audit", response_class=HTMLResponse)
-def audit_trail(page: int = 1):
-    df = pd.read_csv(RESULTS / "day5_audit_log.csv")
+def audit_trail(page: int = 1, source: str = "benchmark"):
+    df = pd.read_csv(audit_file(source))
     page_size = 100
     start = (page - 1) * page_size
     page_df = df.iloc[start : start + page_size]
@@ -127,4 +158,5 @@ def audit_trail(page: int = 1):
         page=page,
         total_pages=total_pages,
         total=len(df),
+        source=source,
     )

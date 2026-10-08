@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Audit Trail</h1>
+<div class="toggle">
+  <a href="/audit?source=benchmark" class="{{ 'active' if source == 'benchmark' else '' }}">Benchmark</a>
+  <a href="/audit?source=demo" class="{{ 'active' if source == 'demo' else '' }}">Demo</a>
+</div>
 <div class="caveat">
   Every decision, including every refusal to act (<span class="badge badge-allow">allow</span>), is logged here, no code
-  path skips it. Page {{ page }} of {{ total_pages }} ({{ total }} total records).
+  path skips it. Page {{ page }} of {{ total_pages }} ({{ total }} total records, <strong>{{ source }}</strong> stream).
 </div>
 <table>
   <thead><tr><th>Transaction</th><th>Entity</th><th>Score (pop.)</th><th>Amount</th><th>Decision</th><th>Reasoning</th></tr></thead>
@@ -21,8 +25,8 @@
   </tbody>
 </table>
 <div style="margin-top:1.5rem;">
-  {% if page > 1 %}<a href="/audit?page={{ page - 1 }}">&larr; prev</a>{% endif %}
+  {% if page > 1 %}<a href="/audit?source={{ source }}&page={{ page - 1 }}">&larr; prev</a>{% endif %}
   &nbsp;&nbsp;
-  {% if page < total_pages %}<a href="/audit?page={{ page + 1 }}">next &rarr;</a>{% endif %}
+  {% if page < total_pages %}<a href="/audit?source={{ source }}&page={{ page + 1 }}">next &rarr;</a>{% endif %}
 </div>
 {% endblock %}

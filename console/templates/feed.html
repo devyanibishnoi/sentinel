@@ -1,17 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Detection Feed</h1>
+<div class="toggle">
+  <a href="/?source=benchmark" class="{{ 'active' if source == 'benchmark' else '' }}">Benchmark</a>
+  <a href="/?source=demo" class="{{ 'active' if source == 'demo' else '' }}">Demo</a>
+</div>
+{% if source == "benchmark" %}
 <div class="caveat">
   Showing flagged detections (decline/review) from the <strong>BENCHMARK</strong> (held-out test) stream only.
   {{ flagged_total }} of {{ total }} total detections were flagged. Source is always shown, never mixed with a demo stream.
 </div>
+{% else %}
+<div class="caveat">
+  <strong>DEMO</strong> stream: synthetic, illustrative transactions, never used for training, never contributes to any
+  reported metric. Showing all {{ total }} demo transactions (small stream, nothing to hide behind a filter).
+</div>
+{% endif %}
 <div style="display:flex; gap:1.5rem; align-items:flex-start;">
   <div style="flex: 1.4;">
     <table>
       <thead><tr><th>Entity</th><th>Score (pop.)</th><th>Amount</th><th>Decision</th><th>Typology</th><th>Ring</th><th>Source</th></tr></thead>
       <tbody>
       {% for d in detections %}
-        <tr class="clickable" hx-get="/detection/{{ d.TransactionID }}" hx-target="#explain-panel" hx-swap="innerHTML">
+        <tr class="clickable" hx-get="/detection/{{ d.TransactionID }}?source={{ source }}" hx-target="#explain-panel" hx-swap="innerHTML">
           <td class="muted">{{ d.entity_id[:22] }}&hellip;</td>
           <td>{{ "%.3f"|format(d.score_population) }}</td>
           <td>&#8377;{{ "%.2f"|format(d.TransactionAmt) }}</td>

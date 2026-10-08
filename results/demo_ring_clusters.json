@@ -1,0 +1,66 @@
+{
+  "caveat": "demo stream has no ground truth; credibility here is judged by population-score agreement, not fraud-rate elevation",
+  "clusters": [
+    {
+      "cluster_id": "demo_ring_0",
+      "entities": [
+        "13832_375.0_185.0_mastercard_224.0_debit_391.0_60.0_54.0",
+        "15308_321.0_150.0_visa_226.0_debit_272.0_87.0_35.0",
+        "1676_555.0_150.0_visa_226.0_debit_184.0_87.0_53.0",
+        "1676_555.0_150.0_visa_226.0_debit_184.0_87.0_54.0",
+        "17131_111.0_150.0_mastercard_224.0_debit_264.0_87.0_53.0",
+        "6530_206.0_150.0_mastercard_166.0_debit_204.0_87.0_54.0",
+        "unmatched_90000001",
+        "unmatched_90000002",
+        "unmatched_90000006",
+        "unmatched_90000007"
+      ],
+      "n_entities": 10,
+      "n_transactions": 13,
+      "proxy_fraud_rate": null,
+      "avg_population_score": 0.4045989188537747,
+      "edges": [
+        {
+          "entity_id": "13832_375.0_185.0_mastercard_224.0_debit_391.0_60.0_54.0",
+          "DeviceInfo": "SM-DEMO01 Build/INJECTEDRING"
+        },
+        {
+          "entity_id": "15308_321.0_150.0_visa_226.0_debit_272.0_87.0_35.0",
+          "DeviceInfo": "SM-DEMO01 Build/INJECTEDRING"
+        },
+        {
+          "entity_id": "1676_555.0_150.0_visa_226.0_debit_184.0_87.0_53.0",
+          "DeviceInfo": "SM-DEMO01 Build/INJECTEDRING"
+        },
+        {
+          "entity_id": "1676_555.0_150.0_visa_226.0_debit_184.0_87.0_54.0",
+          "DeviceInfo": "SM-DEMO01 Build/INJECTEDRING"
+        },
+        {
+          "entity_id": "17131_111.0_150.0_mastercard_224.0_debit_264.0_87.0_53.0",
+          "DeviceInfo": "SM-DEMO01 Build/INJECTEDRING"
+        },
+        {
+          "entity_id": "6530_206.0_150.0_mastercard_166.0_debit_204.0_87.0_54.0",
+          "DeviceInfo": "SM-DEMO01 Build/INJECTEDRING"
+        },
+        {
+          "entity_id": "unmatched_90000001",
+          "DeviceInfo": "SM-DEMO01 Build/INJECTEDRING"
+        },
+        {
+          "entity_id": "unmatched_90000002",
+          "DeviceInfo": "SM-DEMO01 Build/INJECTEDRING"
+        },
+        {
+          "entity_id": "unmatched_90000006",
+          "DeviceInfo": "SM-DEMO01 Build/INJECTEDRING"
+        },
+        {
+          "entity_id": "unmatched_90000007",
+          "DeviceInfo": "SM-DEMO01 Build/INJECTEDRING"
+        }
+      ]
+    }
+  ]
+}

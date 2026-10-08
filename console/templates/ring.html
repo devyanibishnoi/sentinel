@@ -1,11 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Ring: {{ cluster.cluster_id }}</h1>
+<h1>Ring: {{ cluster.cluster_id }} <span class="badge badge-{{ cluster.source }}">{{ cluster.source }}</span></h1>
+{% if cluster.proxy_fraud_rate is not none %}
 <div class="caveat">
   Proxy fraud rate is a <strong>DERIVED PROXY LABEL</strong>, not verified ground truth.
   {{ cluster.n_entities }} entities, {{ cluster.n_transactions }} transactions,
   <strong>{{ "%.1f"|format(cluster.proxy_fraud_rate*100) }}%</strong> proxy fraud rate (baseline &asymp; 4.6%).
 </div>
+{% else %}
+<div class="caveat">
+  <strong>DEMO</strong> cluster: no ground truth exists for synthetic data. {{ cluster.n_entities }} entities,
+  {{ cluster.n_transactions }} transactions, flagged purely by structure (shared device, bounded cluster size),
+  average population score <strong>{{ "%.3f"|format(cluster.avg_population_score) }}</strong> shown as corroborating
+  context only, not a filter (see docs/LEARNING_LOG.md, Day 8).
+</div>
+{% endif %}
 <svg width="560" height="560" style="background:#1a1d24; border-radius:8px; border:1px solid #2a2d36;">
   {% for e in edges %}
   <line x1="{{ e.x1 }}" y1="{{ e.y1 }}" x2="{{ e.x2 }}" y2="{{ e.y2 }}" stroke="#3a3f4a" stroke-width="1.5" />
