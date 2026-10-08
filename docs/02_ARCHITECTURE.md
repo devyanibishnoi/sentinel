@@ -17,46 +17,30 @@
 
 ## 2. Pipeline
 
+As actually built (see `docs/LEARNING_LOG.md` for the full, non-linear story, including a rebuild of entity reconstruction and the split partway through):
+
+```mermaid
+flowchart TD
+    A["1. Ingestion + Entity Reconstruction<br/>card + address + D1 fingerprint"] --> B["Entity-level, time-based split<br/>train / val / test"]
+    B --> C[Feature pipeline, fit on train only]
+    C --> D["2. Detection Engine<br/>IsolationForest, population-only"]
+    C --> E["2. Detection Engine<br/>IsolationForest, population + entity-deviation"]
+    B --> F["4. Ring Detection<br/>shared-device graph, connected components"]
+    B --> G["3. Typology Tagger<br/>cold_start / amount_deviation / device_mismatch"]
+    D --> H["5. Orchestrator<br/>allow / review / decline (ADR-0007: population score + ring membership)"]
+    F --> H
+    G -. explanation only, not a gate input .-> H
+    H --> I[Audit log]
+    D --> J[Results store]
+    E --> J
+    F --> J
+    G --> J
+    H --> J
+    J --> K["6. Risk Console<br/>FastAPI + HTMX"]
+    L["1b. Demo Adapter<br/>synthetic payment-gateway-shaped stream"] -. scores with the already-trained, persisted model, never fits .-> C
 ```
-   IEEE-CIS Fraud Detection (sampled)        Synthetic payment-gateway-shaped stream
-              │                                          │
-              ▼                                          ▼
-   ┌─────────────────────────┐            ┌─────────────────────────┐
-   │ 1. Ingestion + Entity     │            │ 1b. Demo Adapter          │
-   │    Reconstruction         │            │   (same Event schema,      │
-   └────────────┬─────────────┘            │    illustrative only)      │
-                │                          └────────────┬─────────────┘
-                │ feature vectors, keyed by entity_id     │
-                ▼                                        │
-   ┌─────────────────────────┐                          │
-   │ 2. Detection Engine       │◄─────────────────────────┘
-   │  population baseline      │   (scores the demo stream with the
-   │  + per-entity baseline    │    already-trained model, no retraining,
-   │  + IsolationForest         │    no metric contribution)
-   └────────────┬─────────────┘
-                │ Detection (population + entity-deviation scores)
-     ┌──────────┼───────────────┐
-     ▼          ▼               ▼
- ┌────────┐ ┌──────────┐ ┌──────────────┐
- │3. Typo-│ │4. Ring     │ │5. Gated       │
- │  logy   │ │   Detection │ │   Auto-        │
- │  Tags    │ │   (graph,    │ │   Responder     │
- │          │ │   connected  │ │   allow/review/ │
- │          │ │   components)│ │   decline        │
- └────────┘ └──────────┘ └──────────────┘
-                │
-                ▼
-       results store (Parquet/CSV) + audit log
-                │
-                ▼
-   ┌─────────────────────────┐
-   │ 6. Risk Console            │
-   │  FastAPI + HTMX             │
-   │  detection feed, explain     │
-   │  panel, metrics view,         │
-   │  ring viewer, audit trail      │
-   └─────────────────────────┘
-```
+
+The feature pipeline and both IsolationForest models are fit exactly once (`scripts/fit_pipeline.py`), persisted to disk, and loaded by every downstream script, the demo stream included, that's what "never retrains" means in practice, not just a coincidence of a fixed random seed.
 
 ## 3. Component responsibilities
 

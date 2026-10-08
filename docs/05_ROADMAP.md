@@ -66,14 +66,14 @@ Two rules that hold no matter how the days actually land:
 
 **Exit:** the console can be flipped between "scored" and "demo" live, and it's obvious which is which at a glance.
 
-**Status: not started.**
+**Status: done.** Synthetic stream bootstrapped from real feature distributions, injected ring, scored with the already-trained, persisted model (never fit on demo data), benchmark/demo toggle live in the console (Detection Feed, Audit Trail; Metrics stays benchmark-only always). See `docs/LEARNING_LOG.md` for a real bug caught along the way (an overly strict live-ring-credibility rule that excluded the planted ring, fixed).
 
 ## Day 9 — Polish and packaging
 
 - README finalized with the results table and reproduction steps.
 - Architecture diagram redrawn cleanly from `02_ARCHITECTURE.md`.
 
-**Status: not started.** (The original plan also had a short video here; that no longer applies.)
+**Status: done.** README has a real results table (pulled from the actual result files, not memory) and a Mermaid architecture diagram, both there and in `02_ARCHITECTURE.md`. (The original plan also had a short video here; that no longer applies.)
 
 ## Buffer
 
