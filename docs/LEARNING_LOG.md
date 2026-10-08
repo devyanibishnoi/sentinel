@@ -72,7 +72,7 @@ the part that actually clicked for me: I'd already included a `entity_has_histor
 
 this is also, retroactively, why TDS-3 puts "cold start" in the typology tagger as an explicit, named, rule-based tag instead of leaving it for a black-box score to maybe discover. I read that design decision in the spec before writing a line of code and didn't really feel it, now I have the number that makes it obviously the right call: cold-start deserves to be said out loud, not buried inside a feature an unsupervised model has no reason to weight correctly.
 
-**honest Day 2-3 conclusion:** entity-deviation as currently built does not improve PR-AUC over population-only, under either fusion strategy tested, and the reason is identifiable and specific (cold-start concentration of fraud, invisible to an unsupervised model by construction), not a mystery or a bug. reported as-is, per the "no dropped negative results" rule. this is still a complete, submittable answer to the track's bar, an honestly-measured negative result from a properly built evaluation is worth more than an inflated positive one.
+**honest Day 2-3 conclusion:** entity-deviation as currently built does not improve PR-AUC over population-only, under either fusion strategy tested, and the reason is identifiable and specific (cold-start concentration of fraud, invisible to an unsupervised model by construction), not a mystery or a bug. reported as-is, per the "no dropped negative results" rule. this is still a complete, defensible answer on its own, an honestly-measured negative result from a properly built evaluation is worth more than an inflated positive one.
 
 ## Days 3-4, the same bug from Day 1 came back one layer deeper
 
@@ -90,7 +90,7 @@ worth naming the pattern explicitly since it's now shown up twice in one build: 
 
 ## Coming back after missing the original deadline: two real upgrades, now that there's actual time
 
-didn't submit to the original hackathon, deadline passed. not treating that as the end of the project, treating it as permission to go back and actually fix the two things that were deliberately deferred under time pressure, instead of rushing straight to the console.
+missed the original internal deadline for this project. not treating that as the end of it, treating it as permission to go back and actually fix the two things that were deliberately deferred under time pressure, instead of rushing straight to the console.
 
 **fix 1, the entity fingerprint:** added a reverse-engineered trick the Kaggle community uses on this exact dataset: `D1` behaves like "days since this card was first seen," and `TransactionDT / 86400` also increases with real time at the same rate, so `(TransactionDT / 86400) - D1` cancels the time-passing part out and leaves roughly a constant per real account, "which day it first showed up." Added that to the fingerprint alongside card/address fields. Result: biggest fake-looking cluster dropped from 5,862 transactions down to 1,414, a real, measurable improvement, not perfect (1,414 is still too big to be one real account), but a legitimate step forward, and `D1` itself is only missing on 0.2% of rows, so it's a reliable field to lean on. Documenting the residual imperfection rather than claiming this is now solved, chasing it to zero would be diminishing returns against a problem that's structurally unsolvable with proxy data anyway.
 

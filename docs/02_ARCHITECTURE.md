@@ -13,12 +13,12 @@
 - **The `Scorer` protocol is the leverage point.** `fit`/`score`, entity-aware.
 - **Entity is an explicit axis.** Every score answers "how unusual for this entity," not just "how unusual in general."
 - **Explainable, bounded, gated.** Every detection shows its driving signal. Every automated decision has a confidence gate and an audit record, including refusals.
-- **The demo is never the evaluation.** The scored numbers come from the public benchmark's held-out test set, full stop. The Razorpay-shaped stream demonstrates portability, never contributes a metric.
+- **The demo is never the evaluation.** The scored numbers come from the public benchmark's held-out test set, full stop. The payment-gateway-shaped stream demonstrates portability, never contributes a metric.
 
 ## 2. Pipeline
 
 ```
-   IEEE-CIS Fraud Detection (sampled)        Synthetic Razorpay-shaped stream
+   IEEE-CIS Fraud Detection (sampled)        Synthetic payment-gateway-shaped stream
               │                                          │
               ▼                                          ▼
    ┌─────────────────────────┐            ┌─────────────────────────┐

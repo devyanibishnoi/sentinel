@@ -15,7 +15,7 @@
 
 **Fallback: Credit Card Fraud Detection (ULB/Kaggle).** Coarser, session-level entity proxy, used only if proxy-account reconstruction doesn't hold up.
 
-**Demo-only, never scored: synthetic Razorpay-shaped stream.** Generated, not collected, with a small injected ring for the console demo. See `06_FRONTEND_AND_DEMO.md`. This never appears in any metric in this document.
+**Demo-only, never scored: synthetic payment-gateway-shaped stream.** Generated, not collected, with a small injected ring for the console demo. See `06_FRONTEND_AND_DEMO.md`. This never appears in any metric in this document.
 
 ## 2. Proxy account reconstruction
 

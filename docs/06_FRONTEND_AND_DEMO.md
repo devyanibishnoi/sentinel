@@ -15,7 +15,7 @@ The console has exactly one job: make the engine's rigor and reasoning visible i
 
 1. **Detection feed** — a live-updating list of flagged transactions or demo events, newest first, showing entity id, combined score, timestamp, and source (`benchmark` or `demo`, visually distinct, never mixed in one unlabeled list).
 2. **Explain panel** — click a detection, see a breakdown: population score, entity-deviation score, typology tag if any, ring cluster if any. This is the literal, clickable version of "explainable, bounded, gated." No detection is unexplained.
-3. **Metrics view** — the results table from the Data & Eval spec, rendered: PR/ROC curves, baseline comparison, the entity-vs-population lift number, front and center, not buried in a CSV. This is where the track's own bar ("measured precision and recall on a held-out test set") becomes something a reviewer can verify by looking, not by trusting a claim.
+3. **Metrics view** — the results table from the Data & Eval spec, rendered: PR/ROC curves, baseline comparison, the entity-vs-population lift number, front and center, not buried in a CSV. This is where "measured precision and recall on a held-out test set" becomes something a reviewer can verify by looking, not by trusting a claim.
 4. **Ring viewer** — a simple force-directed or fixed-layout graph of one flagged cluster: nodes are entities, edges are shared fingerprints, sized by cluster proxy fraud rate. Doesn't need to be fancy, needs to make "this is a ring, not a coincidence" visually obvious in two seconds.
 5. **Audit trail** — every auto-responder decision (allow/review/decline), with its reasoning, in one chronological list. Every refusal to act is in here too, not just the actions taken, matching the original project's "audit everything, including refusals" principle.
 
@@ -27,9 +27,9 @@ FastAPI + HTMX, server-rendered templates. No React, no build step, no client-si
 
 ## 4. The demo stream, precisely
 
-The Demo Adapter (Architecture §3) generates transactions shaped like a real payment gateway payload: a payment method (card, UPI, netbanking, wallet), an amount in the smallest currency unit, a timestamp, and enough entity-linkable fields to support the same entity reconstruction logic used on the real dataset. Field names should be confirmed against Razorpay's actual API documentation once test-mode credentials are available, this doc describes the shape and intent, not a verified schema.
+The Demo Adapter (Architecture §3) generates transactions shaped like a real payment gateway payload: a payment method (card, UPI, netbanking, wallet), an amount in the smallest currency unit, a timestamp, and enough entity-linkable fields to support the same entity reconstruction logic used on the real dataset. Field names are illustrative, modeled loosely on common Indian payment gateway shapes, this doc describes shape and intent, not a verified schema against any specific provider.
 
-A small number of entities in the stream (roughly 5 to 10) deliberately share a device or card fingerprint at a rate that should trip the ring detector, so the ring viewer has something real to show on camera without waiting on a rare real-world case to surface in a random test-set slice.
+A small number of entities in the stream (roughly 5 to 10) deliberately share a device or card fingerprint at a rate that should trip the ring detector, so the ring viewer has something real to show live in the console without waiting on a rare real-world case to surface in a random test-set slice.
 
 **What the demo stream is never used for:** training, threshold selection, or any number that appears next to the words "precision," "recall," "FPR," or "PR-AUC." Its only job is to prove the pipeline runs against something shaped like the platform this project is built for. The video should say this explicitly, out loud, not leave it implied.
 

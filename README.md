@@ -34,7 +34,7 @@ A flat "is this transaction fraud" classifier misses the cases that matter most:
 4. **Ring Detection** — shared-fingerprint clustering across entities
 5. **Gated Auto-Responder** — allow / review / decline, with a complete audit trail
 6. **Risk Console** — detection feed, explain panel, metrics view, ring viewer, audit trail
-7. **Demo Layer** — a Razorpay-shaped synthetic stream, always visually separated from scored results
+7. **Demo Layer** — a realistic, payment-gateway-shaped synthetic stream, always visually separated from scored results
 
 ## Design principles
 

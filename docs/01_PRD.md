@@ -15,7 +15,7 @@ Digital payment fraud in India is real and growing fast, not a hypothetical: RBI
 
 ## 3. Class of loss
 
-**Account-level behavioral fraud, with abuse-ring detection and a gated auto-responder built as core capabilities on the same entity model**, not as afterthoughts. This directly answers three of the track's four example directions (fraud-spike detector, abuse-ring sentinel, and the "auto-responder" shape the bar explicitly allows) from one underlying engine. Chargeback-evidence and return-risk remain out of scope, documented as open extensions (§9).
+**Account-level behavioral fraud, with abuse-ring detection and a gated auto-responder built as core capabilities on the same entity model**, not as afterthoughts. This covers three distinct fraud-detection shapes (fraud-spike detection, abuse-ring detection, and an auto-responder) from one underlying engine, not three separate systems. Chargeback-evidence and return-risk remain out of scope, documented as open extensions (§9).
 
 ## 4. Goals and non-goals
 
@@ -25,11 +25,11 @@ Digital payment fraud in India is real and growing fast, not a hypothetical: RBI
 - Gate high-confidence detections into an auto-responder (allow / review / decline) with a full, inspectable audit trail.
 - Make every detection explainable: which signal drove it, at a glance, in a live console.
 - Measure precision, recall, and FPR against explicit baselines, both population-level and entity-level, on a real held-out test set.
-- Demonstrate the engine against a live, Razorpay-shaped synthetic stream, clearly separated from and never blended into the scored evaluation.
+- Demonstrate the engine against a live, realistic payment-gateway-shaped synthetic stream, clearly separated from and never blended into the scored evaluation.
 - Every result reproducible from a config and a dataset hash.
 
 **Non-goals**
-- Not a production fraud engine or a live payment-gateway integration. The Razorpay-shaped demo stream is synthetic, illustrative, and clearly labeled as such.
+- Not a production fraud engine or a live payment-gateway integration. The payment-gateway-shaped demo stream is synthetic, illustrative, and clearly labeled as such.
 - Not real-time streaming at scale.
 - Not chargebacks or returns in this build.
 - Not a verified ground-truth ring dataset; ring evaluation uses a derived proxy label (§8), reported as approximate.
@@ -62,7 +62,7 @@ Digital payment fraud in India is real and growing fast, not a hypothetical: RBI
 - Ring detection: shared-fingerprint graph, connected components, proxy-label evaluation.
 - Gated auto-responder: allow / review / decline, full audit log.
 - Risk Console (see `06_FRONTEND_AND_DEMO.md`): detection feed, explain panel, metrics view, ring viewer, audit trail.
-- Razorpay-shaped demo stream, clearly separated from scored results.
+- Payment-gateway-shaped demo stream, clearly separated from scored results.
 
 **Explicitly not core, cut first if the timeline slips:**
 - Autoencoder (only if IsolationForest leaves clear headroom).

@@ -29,7 +29,7 @@ class FeaturePipeline:
 
 ## TDS-1b — Demo Adapter
 
-**Responsibility:** generate synthetic, Razorpay-shaped transactions for the console demo, implementing the same `DatasetAdapter` interface as TDS-1 so the rest of the pipeline treats it identically.
+**Responsibility:** generate synthetic, payment-gateway-shaped transactions for the console demo, implementing the same `DatasetAdapter` interface as TDS-1 so the rest of the pipeline treats it identically.
 
 **Interface:** same `DatasetAdapter` protocol as TDS-1, plus:
 ```python
@@ -39,7 +39,7 @@ class DemoAdapter(DatasetAdapter):
 
 **Core logic:** produces `Event` objects tagged `source="demo"` at normalization time (Architecture §4), so the separation from scored results is enforced in the data itself, not left to application logic to remember. Never used to fit anything, only to score with the already-trained model.
 
-**Open questions:** exact field names should mirror Razorpay's real API once test-mode credentials confirm the schema; this spec describes shape, not a verified contract.
+**Open questions:** field names are illustrative (method, amount, timestamp, entity-linkable fields), modeled loosely on common Indian payment gateway shapes (card, UPI, netbanking, wallet), not verified against any specific provider's real API.
 
 ---
 
