@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0b0d;
+  --surface: #121419;
+  --surface-raised: #191c22;
+  --border: #242830;
+  --border-strong: #33383f;
+
+  --text: #e9ebee;
+  --text-muted: #9aa0ab;
+  --text-faint: #686f7a;
+
+  --accent: #4dc9c0;
+  --accent-dim: #2a5f5a;
+
+  --red: #f0756a;
+  --red-bg: #2a1716;
+  --amber: #e0b05a;
+  --amber-bg: #2a2214;
+  --blue: #6fa8dc;
+  --blue-bg: #16232e;
+  --green: #7bc896;
+  --green-bg: #15241a;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-red: var(--red);
+  --color-red-bg: var(--red-bg);
+  --color-amber: var(--amber);
+  --color-amber-bg: var(--amber-bg);
+  --color-blue: var(--blue);
+  --color-blue-bg: var(--blue-bg);
+  --color-green: var(--green);
+  --color-green-bg: var(--green-bg);
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--accent-dim);
+  color: var(--text);
+}
