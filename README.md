@@ -123,4 +123,4 @@ Every script prints its own numbers and writes to `results/` (gitignored, regene
 
 ## Status
 
-All eight build phases complete: entity reconstruction, baselines, the central detector, ring detection, the gated auto-responder, the Risk Console, and the demo layer. See [`docs/05_ROADMAP.md`](docs/05_ROADMAP.md) for the full history, including a complete rebuild of the entity fingerprint and evaluation split partway through, once a sharper approach became clear.
+All eight build phases complete: entity reconstruction, baselines, the central detector, ring detection, the gated auto-responder, the Risk Console, the demo layer, and final polish (this README, the architecture diagram, the portfolio frontend). See [`docs/05_ROADMAP.md`](docs/05_ROADMAP.md) for the full history, including a complete rebuild of the entity fingerprint and evaluation split partway through, once a sharper approach became clear.

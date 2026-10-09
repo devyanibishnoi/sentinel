@@ -34,4 +34,4 @@ npx serve out
 
 Point a new Vercel project at this repo with **`web`** as the root directory. Vercel auto-detects Next.js and the `output: "export"` config, no extra settings needed.
 
-Before deploying, update `lib/site.ts` with the real GitHub repo URL.
+`lib/site.ts` holds the GitHub repo/profile URLs and author name shown in the footer, already pointed at the real ones, only touch it if those ever change.
