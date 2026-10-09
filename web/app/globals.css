@@ -11,14 +11,16 @@
   --text-muted: #9aa0ab;
   --text-faint: #686f7a;
 
-  --accent: #4dc9c0;
-  --accent-dim: #2a5f5a;
-  --accent-bg: #10211f;
+  --accent: #4ade80;
+  --accent-dim: #1f6b3f;
+  --accent-bg: #10211a;
 
   --red: #ea7267;
   --red-bg: #271513;
   --amber: #dcac56;
   --amber-bg: #251e11;
+
+  --chart-track: #2a2e36;
 }
 
 @theme inline {
@@ -37,6 +39,7 @@
   --color-red-bg: var(--red-bg);
   --color-amber: var(--amber);
   --color-amber-bg: var(--amber-bg);
+  --color-chart-track: var(--chart-track);
   --font-sans: var(--font-plex-sans);
   --font-mono: var(--font-plex-mono);
 }

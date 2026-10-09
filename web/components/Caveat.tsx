@@ -7,7 +7,7 @@ export function Caveat({
 }) {
   if (tone === "warning") {
     return (
-      <div className="rounded-md border border-amber/25 bg-amber-bg px-4 py-3 text-sm text-amber/95 mb-6">
+      <div className="rounded-md border border-border bg-surface border-l-2 border-l-amber pl-4 pr-4 py-3 text-sm text-text-muted mb-6">
         {children}
       </div>
     );
