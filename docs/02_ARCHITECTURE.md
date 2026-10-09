@@ -1,4 +1,4 @@
-# Sentinel — System Architecture
+# Sentinel: System Architecture
 
 **Status:** Draft v1.1
 **Owner:** Devyani Bishnoi
@@ -44,21 +44,21 @@ The feature pipeline and both IsolationForest models are fit exactly once (`scri
 
 ## 3. Component responsibilities
 
-**Ingestion & Entity Reconstruction** — unchanged from prior revision. Loads a stratified IEEE-CIS sample, derives `entity_id`, sanity-checks it before anything trusts it.
+**Ingestion & Entity Reconstruction:** unchanged from prior revision. Loads a stratified IEEE-CIS sample, derives `entity_id`, sanity-checks it before anything trusts it.
 
-**Demo Adapter (new)** — produces synthetic transactions in the same `Event` schema as the real adapter, shaped like a real payment gateway transaction (method, amount in the smallest currency unit, timestamp, entity), with a small injected ring (a handful of entities deliberately sharing a device/card fingerprint) so it's reliably catchable on camera. Never used for training or for the scored evaluation, only for scoring with the already-fit model, live, in the console.
+**Demo Adapter (new):** produces synthetic transactions in the same `Event` schema as the real adapter, shaped like a real payment gateway transaction (method, amount in the smallest currency unit, timestamp, entity), with a small injected ring (a handful of entities deliberately sharing a device/card fingerprint) so it's reliably catchable live. Never used for training or for the scored evaluation, only for scoring with the already-fit model, live, in the console.
 
-**Detection Engine** — unchanged core idea: population deviation plus entity deviation, combined into one score, IsolationForest doing the heavy lifting on the combined feature set.
+**Detection Engine:** unchanged core idea: population deviation plus entity deviation, combined into one score, IsolationForest doing the heavy lifting on the combined feature set.
 
-**Typology Tagging** — unchanged: descriptive, unscored, rule-based (device mismatch, amount deviation, cold start).
+**Typology Tagging:** unchanged: descriptive, unscored, rule-based (device mismatch, amount deviation, cold start).
 
-**Ring Detection (now core)** — shared-fingerprint graph, `networkx` connected components, proxy fraud-rate evaluation with the ground-truth caveat stated everywhere it's shown.
+**Ring Detection (now core):** shared-fingerprint graph, `networkx` connected components, proxy fraud-rate evaluation with the ground-truth caveat stated everywhere it's shown.
 
-**Gated Auto-Responder (now core)** — on a Detection above a confidence threshold, decides allow / review / decline based on score and a simple exposure proxy (transaction amount standing in for blast radius). Every decision, including a decision *not* to act, writes an audit record: score, threshold, entity, reasoning.
+**Gated Auto-Responder (now core):** on a Detection above a confidence threshold, decides allow / review / decline based on score and a simple exposure proxy (transaction amount standing in for blast radius). Every decision, including a decision *not* to act, writes an audit record: score, threshold, entity, reasoning.
 
-**Risk Console (new, see `06_FRONTEND_AND_DEMO.md` for the full spec)** — reads from the results store and audit log. Not a separate service with its own state; a thin read view, same instinct as the original project's ADR-0002.
+**Risk Console (new, see `06_FRONTEND_AND_DEMO.md` for the full spec):** reads from the results store and audit log. Not a separate service with its own state; a thin read view, same instinct as the original project's ADR-0002.
 
-## 4. Core data contract — `Detection`
+## 4. Core data contract: `Detection`
 
 ```jsonc
 {

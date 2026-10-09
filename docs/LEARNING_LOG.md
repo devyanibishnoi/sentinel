@@ -1,4 +1,4 @@
-# Sentinel — Learning Log
+# Sentinel: Learning Log
 
 This is the running notebook for the project. Every time a new concept comes up while building, the explanation gets logged here, in order, so by the end this reads like a small book of everything learned building Sentinel.
 

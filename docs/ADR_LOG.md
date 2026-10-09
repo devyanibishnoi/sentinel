@@ -7,7 +7,7 @@ ADRs capture *why* a decision was made, the alternatives, and the tradeoffs, so 
 ## Template
 
 ```
-# ADR-NNNN — <title>
+# ADR-NNNN: <title>
 Status: proposed | accepted | superseded by ADR-XXXX
 Date: YYYY-MM-DD
 Context: what forces are at play?
@@ -18,7 +18,7 @@ Alternatives considered: and why not.
 
 ---
 
-# ADR-0001 — Class of loss: account-level behavioral fraud, not isolated transaction scoring
+# ADR-0001: Class of loss: account-level behavioral fraud, not isolated transaction scoring
 
 **Status:** accepted · **Date:** 2026-08-26
 
@@ -29,12 +29,12 @@ Alternatives considered: and why not.
 **Consequences:** requires a dataset with a real or reconstructable entity identifier, which rules out simpler anonymized transaction datasets and adds real preprocessing work. In exchange, produces a detector that catches account-takeover-style fraud a population-only model misses entirely, and gives a genuinely defensible answer to why this looks like security work applied to a fintech problem, not just a fraud classifier with a new coat of paint.
 
 **Alternatives considered:**
-- *Flat population-level classifier* — simpler, faster to build, can look sufficient on paper, but has no answer for why it's a distinctive approach versus any other fraud model, and can't extend cleanly into ring detection.
-- *Chargeback-evidence or return-risk as the primary loss type* — both valid directions, but neither has the same natural entity-behavior framing, and public dataset support for them is weaker.
+- *Flat population-level classifier:* simpler, faster to build, can look sufficient on paper, but has no answer for why it's a distinctive approach versus any other fraud model, and can't extend cleanly into ring detection.
+- *Chargeback-evidence or return-risk as the primary loss type:* both valid directions, but neither has the same natural entity-behavior framing, and public dataset support for them is weaker.
 
 ---
 
-# ADR-0002 — Entity reconstruction and dataset choice: IEEE-CIS over an anonymized transaction set
+# ADR-0002: Entity reconstruction and dataset choice: IEEE-CIS over an anonymized transaction set
 
 **Status:** accepted · **Date:** 2026-08-26
 
@@ -45,12 +45,12 @@ Alternatives considered: and why not.
 **Consequences:** meaningfully more preprocessing risk and effort than an anonymized single-file dataset would require. Proxy identity reconstruction is a known but approximate technique, not verified ground truth, and this is documented everywhere it matters rather than glossed over. In exchange, this is the only path that actually supports the project's core premise; without it, the entity-behavior story has nothing to baseline against.
 
 **Alternatives considered:**
-- *ULB Credit Card Fraud as primary* — clean, fast, no preprocessing burden, but has no entity identifier at all, so per-entity baselining isn't possible. Demoted to fallback status.
-- *Synthetic account-behavior generator* — avoids the proxy-identity risk entirely, but loses the "real, defensible, held-out test set" framing this project is built around. Kept as a fallback-of-the-fallback if IEEE-CIS proves unworkable in the available time.
+- *ULB Credit Card Fraud as primary:* clean, fast, no preprocessing burden, but has no entity identifier at all, so per-entity baselining isn't possible. Demoted to fallback status.
+- *Synthetic account-behavior generator:* avoids the proxy-identity risk entirely, but loses the "real, defensible, held-out test set" framing this project is built around. Kept as a fallback-of-the-fallback if IEEE-CIS proves unworkable in the available time.
 
 ---
 
-# ADR-0003 — Core stack and scope cuts for the build window
+# ADR-0003: Core stack and scope cuts for the build window
 
 **Status:** accepted · **Date:** 2026-08-26
 
@@ -61,12 +61,12 @@ Alternatives considered: and why not.
 **Consequences:** keeps the entire time budget on the detection engine and its evaluation, which is where the actual signal lives. Accepts that the deliverable won't look like a finished product at this stage, which is fine: a repo that runs and an honest account of what broke matters more early on than a polished UI. (Superseded in part by ADR-0005, a console did eventually get built, once the engine and its evaluation were solid first.)
 
 **Alternatives considered:**
-- *A minimal dashboard* — would help demo the results visually, but a clean results table and a walked-through notebook cover the same need without the build cost, at this stage of the project. Not pursued yet.
-- *LLM-based typology enrichment* — tempting given prior RAG experience, but the descriptive rule-based typology tagger (TDS-3) already satisfies the "explain the flag in plain language" need without adding a new dependency and a new failure surface to a short build window.
+- *A minimal dashboard:* would help demo the results visually, but a clean results table and a walked-through notebook cover the same need without the build cost, at this stage of the project. Not pursued yet.
+- *LLM-based typology enrichment:* tempting given prior RAG experience, but the descriptive rule-based typology tagger (TDS-3) already satisfies the "explain the flag in plain language" need without adding a new dependency and a new failure surface to a short build window.
 
 ---
 
-# ADR-0004 — Promote ring detection and the gated auto-responder to core scope
+# ADR-0004: Promote ring detection and the gated auto-responder to core scope
 
 **Status:** accepted · **Date:** 2026-08-26
 
@@ -80,7 +80,7 @@ Alternatives considered: and why not.
 
 ---
 
-# ADR-0005 — Bring the frontend back into scope: a Risk Console over FastAPI + HTMX
+# ADR-0005: Bring the frontend back into scope: a Risk Console over FastAPI + HTMX
 
 **Status:** accepted · **Date:** 2026-08-26
 
@@ -94,7 +94,7 @@ Alternatives considered: and why not.
 
 ---
 
-# ADR-0006 — Dual-mode demo layer, strictly separated from the scored evaluation
+# ADR-0006: Dual-mode demo layer, strictly separated from the scored evaluation
 
 **Status:** accepted · **Date:** 2026-08-26
 
@@ -108,7 +108,7 @@ Alternatives considered: and why not.
 
 ---
 
-# ADR-0007 — Orchestrator decides on population score + ring membership, not score_combined
+# ADR-0007: Orchestrator decides on population score + ring membership, not score_combined
 
 **Status:** accepted · **Date:** 2026-10-07
 
@@ -119,5 +119,5 @@ Alternatives considered: and why not.
 **Consequences:** the system's actual decision logic now matches what was empirically proven to work, rather than what was assumed to work before any evidence existed. Makes the Orchestrator's reasoning more defensible (every input it acts on has its own validated evidence behind it), at the cost of diverging from the Detection contract's original implied design intent. `score_entity_deviation`/`score_combined` remain visible for honesty and future re-evaluation (e.g. if the entity fingerprint or feature set improves further), they're demoted, not deleted.
 
 **Alternatives considered:**
-- *Keep using `score_combined` as specified* — rejected, would mean knowingly building the auto-responder's core logic around a signal already shown to underperform, purely for spec-fidelity, not defensible once the evidence existed.
-- *Blend ring membership into one combined score alongside population* — rejected for now, ring membership is a structurally different kind of evidence (graph connectivity, not a per-transaction feature), and keeping it as a separate, explicit gate is more explainable in the console later than burying it inside one opaque number.
+- *Keep using `score_combined` as specified:* rejected, would mean knowingly building the auto-responder's core logic around a signal already shown to underperform, purely for spec-fidelity, not defensible once the evidence existed.
+- *Blend ring membership into one combined score alongside population:* rejected for now, ring membership is a structurally different kind of evidence (graph connectivity, not a per-transaction feature), and keeping it as a separate, explicit gate is more explainable in the console later than burying it inside one opaque number.

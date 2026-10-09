@@ -1,4 +1,4 @@
-# Sentinel — Data & Evaluation Specification
+# Sentinel: Data & Evaluation Specification
 
 **Status:** Draft v1.1
 **Owner:** Devyani Bishnoi

@@ -1,4 +1,4 @@
-# Sentinel — Risk Console & Demo Layer
+# Sentinel: Risk Console & Demo Layer
 
 **Status:** Draft v1.0
 **Owner:** Devyani Bishnoi
@@ -13,11 +13,11 @@ The console has exactly one job: make the engine's rigor and reasoning visible i
 
 ## 2. The five features, no more
 
-1. **Detection feed** — a live-updating list of flagged transactions or demo events, newest first, showing entity id, combined score, timestamp, and source (`benchmark` or `demo`, visually distinct, never mixed in one unlabeled list).
-2. **Explain panel** — click a detection, see a breakdown: population score, entity-deviation score, typology tag if any, ring cluster if any. This is the literal, clickable version of "explainable, bounded, gated." No detection is unexplained.
-3. **Metrics view** — the results table from the Data & Eval spec, rendered: PR/ROC curves, baseline comparison, the entity-vs-population lift number, front and center, not buried in a CSV. This is where "measured precision and recall on a held-out test set" becomes something a reviewer can verify by looking, not by trusting a claim.
-4. **Ring viewer** — a simple force-directed or fixed-layout graph of one flagged cluster: nodes are entities, edges are shared fingerprints, sized by cluster proxy fraud rate. Doesn't need to be fancy, needs to make "this is a ring, not a coincidence" visually obvious in two seconds.
-5. **Audit trail** — every auto-responder decision (allow/review/decline), with its reasoning, in one chronological list. Every refusal to act is in here too, not just the actions taken, matching the original project's "audit everything, including refusals" principle.
+1. **Detection feed:** a live-updating list of flagged transactions or demo events, newest first, showing entity id, combined score, timestamp, and source (`benchmark` or `demo`, visually distinct, never mixed in one unlabeled list).
+2. **Explain panel:** click a detection, see a breakdown: population score, entity-deviation score, typology tag if any, ring cluster if any. This is the literal, clickable version of "explainable, bounded, gated." No detection is unexplained.
+3. **Metrics view:** the results table from the Data & Eval spec, rendered: PR/ROC curves, baseline comparison, the entity-vs-population lift number, front and center, not buried in a CSV. This is where "measured precision and recall on a held-out test set" becomes something a reviewer can verify by looking, not by trusting a claim.
+4. **Ring viewer:** a simple force-directed or fixed-layout graph of one flagged cluster: nodes are entities, edges are shared fingerprints, sized by cluster proxy fraud rate. Doesn't need to be fancy, needs to make "this is a ring, not a coincidence" visually obvious in two seconds.
+5. **Audit trail:** every auto-responder decision (allow/review/decline), with its reasoning, in one chronological list. Every refusal to act is in here too, not just the actions taken, matching the original project's "audit everything, including refusals" principle.
 
 Nothing else. If a build session produces an idea for feature six, it goes in `05_ROADMAP.md`'s cut list, not into the console.
 

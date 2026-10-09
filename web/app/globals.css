@@ -13,15 +13,12 @@
 
   --accent: #4dc9c0;
   --accent-dim: #2a5f5a;
+  --accent-bg: #10211f;
 
-  --red: #f0756a;
-  --red-bg: #2a1716;
-  --amber: #e0b05a;
-  --amber-bg: #2a2214;
-  --blue: #6fa8dc;
-  --blue-bg: #16232e;
-  --green: #7bc896;
-  --green-bg: #15241a;
+  --red: #ea7267;
+  --red-bg: #271513;
+  --amber: #dcac56;
+  --amber-bg: #251e11;
 }
 
 @theme inline {
@@ -35,14 +32,11 @@
   --color-text-faint: var(--text-faint);
   --color-accent: var(--accent);
   --color-accent-dim: var(--accent-dim);
+  --color-accent-bg: var(--accent-bg);
   --color-red: var(--red);
   --color-red-bg: var(--red-bg);
   --color-amber: var(--amber);
   --color-amber-bg: var(--amber-bg);
-  --color-blue: var(--blue);
-  --color-blue-bg: var(--blue-bg);
-  --color-green: var(--green);
-  --color-green-bg: var(--green-bg);
   --font-sans: var(--font-plex-sans);
   --font-mono: var(--font-plex-mono);
 }

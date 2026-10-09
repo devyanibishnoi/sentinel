@@ -1,2 +1,3 @@
-// TODO: replace with the real repo URL before deploying.
-export const GITHUB_URL = "https://github.com/YOUR_USERNAME/sentinel";
+export const GITHUB_REPO_URL = "https://github.com/devyanibishnoi/sentinel";
+export const GITHUB_PROFILE_URL = "https://github.com/devyanibishnoi";
+export const AUTHOR_NAME = "Devyani Bishnoi";

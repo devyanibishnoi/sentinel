@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { GITHUB_URL } from "@/lib/site";
+import { GITHUB_REPO_URL } from "@/lib/site";
 
 const links = [
   { href: "/demo", label: "Detection Feed" },
@@ -38,7 +38,7 @@ export function DemoNav() {
           </nav>
         </div>
         <a
-          href={GITHUB_URL}
+          href={GITHUB_REPO_URL}
           target="_blank"
           rel="noreferrer"
           className="text-sm text-text-muted hover:text-text transition-colors"

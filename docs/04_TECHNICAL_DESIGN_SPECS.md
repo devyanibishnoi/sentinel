@@ -1,10 +1,10 @@
-# Sentinel — Technical Design Specifications
+# Sentinel: Technical Design Specifications
 
 One section per component. Read alongside `02_ARCHITECTURE.md` (the `Detection` contract), `03_DATA_AND_EVALUATION.md`, and `06_FRONTEND_AND_DEMO.md` (the console).
 
 ---
 
-## TDS-1 — Ingestion & Entity Reconstruction
+## TDS-1: Ingestion & Entity Reconstruction
 
 **Responsibility:** turn raw transaction data into normalized feature vectors keyed by a proxy entity, leak-free.
 
@@ -27,7 +27,7 @@ class FeaturePipeline:
 
 ---
 
-## TDS-1b — Demo Adapter
+## TDS-1b: Demo Adapter
 
 **Responsibility:** generate synthetic, payment-gateway-shaped transactions for the console demo, implementing the same `DatasetAdapter` interface as TDS-1 so the rest of the pipeline treats it identically.
 
@@ -43,7 +43,7 @@ class DemoAdapter(DatasetAdapter):
 
 ---
 
-## TDS-2 — Detection Engine
+## TDS-2: Detection Engine
 
 **Responsibility:** score each transaction against both the population and its own entity's history.
 
@@ -68,7 +68,7 @@ class DetectionEngine:
 
 ---
 
-## TDS-3 — Typology Tagging
+## TDS-3: Typology Tagging
 
 **Responsibility:** attach descriptive, unscored tags to flagged transactions.
 
@@ -82,7 +82,7 @@ class TypologyTagger:
 
 ---
 
-## TDS-4 — Ring Detection
+## TDS-4: Ring Detection
 
 **Responsibility:** flag clusters of entities sharing device or card fingerprints at a suspicious rate.
 
@@ -100,7 +100,7 @@ class RingDetector:
 
 ---
 
-## TDS-5 — Gated Auto-Responder
+## TDS-5: Gated Auto-Responder
 
 **Responsibility:** turn a high-confidence Detection into a decision, with a complete audit trail.
 
@@ -124,7 +124,7 @@ class Orchestrator:
 
 ---
 
-## TDS-6 — Risk Console
+## TDS-6: Risk Console
 
 **Responsibility:** render the detection feed, explain panel, metrics view, ring viewer, and audit trail. Full feature boundary in `06_FRONTEND_AND_DEMO.md`.
 

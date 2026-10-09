@@ -1,4 +1,4 @@
-# Sentinel — Delivery Roadmap
+# Sentinel: Delivery Roadmap
 
 **Status:** Draft v1.1
 **Owner:** Devyani Bishnoi
@@ -21,7 +21,7 @@ Two rules that hold no matter how the days actually land:
 
 ---
 
-## Day 1 — Scaffold, entities, baselines
+## Day 1: Scaffold, entities, baselines
 
 - Stratified IEEE-CIS sample loaded, row counts and class balance printed.
 - Proxy account reconstruction, sanity checks, inside the time-box.
@@ -30,7 +30,7 @@ Two rules that hold no matter how the days actually land:
 
 **Exit:** a number to beat, at both levels, written down.
 
-## Days 2 to 3 — Real detector, the lift check
+## Days 2 to 3: Real detector, the lift check
 
 - IsolationForest on combined population + entity-deviation features.
 - Held-out test evaluation at the entity-level split.
@@ -38,28 +38,28 @@ Two rules that hold no matter how the days actually land:
 
 **Exit:** this alone, if forced to stop here, is a complete, defensible answer on its own.
 
-## Days 3 to 4 — Ring detection
+## Days 3 to 4: Ring detection
 
 - Shared-fingerprint graph, connected components.
 - Cluster proxy fraud-rate evaluation, caveat attached everywhere it's shown.
 
 **Exit:** at least one real cluster from the held-out set that the console's ring viewer will later be able to show.
 
-## Day 5 — Gated auto-responder
+## Day 5: Gated auto-responder
 
 - Playbook + Orchestrator (TDS-5), confidence and exposure gates.
 - Full audit log, including refusals.
 
 **Exit:** a decision trail that exists independent of the console, testable from the command line before any UI touches it.
 
-## Days 6 to 7 — Risk Console
+## Days 6 to 7: Risk Console
 
 - FastAPI + HTMX, the five features from `06_FRONTEND_AND_DEMO.md`, no more.
 - Detection feed and explain panel first (they're what every other feature hangs off of), metrics view and audit trail next, ring viewer last since it depends on day 3 to 4's output already existing.
 
 **Exit:** a reviewer can open the console cold and understand the engine's reasoning without narration.
 
-## Day 8 — Demo layer
+## Day 8: Demo layer
 
 - Demo Adapter, synthetic payment-gateway-shaped stream, injected ring.
 - Wired into the console with the `source` field making the benchmark/demo split visually unmissable.
@@ -68,7 +68,7 @@ Two rules that hold no matter how the days actually land:
 
 **Status: done.** Synthetic stream bootstrapped from real feature distributions, injected ring, scored with the already-trained, persisted model (never fit on demo data), benchmark/demo toggle live in the console (Detection Feed, Audit Trail; Metrics stays benchmark-only always). See `docs/LEARNING_LOG.md` for a real bug caught along the way (an overly strict live-ring-credibility rule that excluded the planted ring, fixed).
 
-## Day 9 — Polish and packaging
+## Day 9: Polish and packaging
 
 - README finalized with the results table and reproduction steps.
 - Architecture diagram redrawn cleanly from `02_ARCHITECTURE.md`.

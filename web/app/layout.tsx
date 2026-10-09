@@ -15,7 +15,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sentinel — Behavioral Fraud Detection",
+  title: "Sentinel: Behavioral Fraud Detection",
   description:
     "An entity-behavior fraud detection engine: UEBA-style baselines, ring detection, and a gated auto-responder, with every result honestly measured, including the negative ones.",
 };

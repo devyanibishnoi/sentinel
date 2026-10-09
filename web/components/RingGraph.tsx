@@ -33,8 +33,8 @@ export function RingGraph({ cluster }: { cluster: RingCluster }) {
             key={id}
             cx={x}
             cy={y}
-            r={isEntity ? 9 : 6}
-            fill={isEntity ? "var(--red)" : "var(--blue)"}
+            r={isEntity ? 8 : 10}
+            fill={isEntity ? "var(--text-muted)" : "var(--accent)"}
           />
         );
       })}

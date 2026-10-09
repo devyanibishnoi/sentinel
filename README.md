@@ -1,6 +1,6 @@
 # Sentinel
 
-**Behavioral fraud detection for payments** — detection by deviation from learned account behavior, not by matching known rules. Explainable, gated, and viewable live in a console, not buried in a notebook.
+**Behavioral fraud detection for payments.** Detection by deviation from learned account behavior, not by matching known rules. Explainable, gated, and viewable live in a console, not buried in a notebook.
 
 ---
 
@@ -54,7 +54,7 @@ All numbers below are from the real, held-out IEEE-CIS test split (85,004 transa
 
 The real detector beats every baseline by roughly 3x.
 
-**The central question — does knowing an account's own history help? Honestly: no.** Entity-deviation does not improve PR-AUC over population-only, confirmed even when restricted to the 35% of transactions that actually have any entity history at all. Root-caused, not hand-waved: 42% of all fraud in this dataset happens on an account's *very first* transaction, where there is no history to deviate from by construction, and even where history exists, it's thin (median 2 prior transactions, 41% of those have exactly 1, not enough to compute a standard deviation from). Three independent lines of evidence point the same way. See `docs/ADR_LOG.md` (ADR-0007) for what this changed about the design.
+**The central question: does knowing an account's own history help? Honestly, no.** Entity-deviation does not improve PR-AUC over population-only, confirmed even when restricted to the 35% of transactions that actually have any entity history at all. Root-caused, not hand-waved: 42% of all fraud in this dataset happens on an account's *very first* transaction, where there is no history to deviate from by construction, and even where history exists, it's thin (median 2 prior transactions, 41% of those have exactly 1, not enough to compute a standard deviation from). Three independent lines of evidence point the same way. See `docs/ADR_LOG.md` (ADR-0007) for what this changed about the design.
 
 **Ring detection works, clearly.** 70 credible clusters found (shared-device fingerprint, size *and* fraud-rate-elevation validated, not size alone, see the Learning Log for the bug that taught us why both matter). The strongest: **12 accounts sharing one device, 100% fraud rate**, against a 4.6% baseline.
 
@@ -103,13 +103,13 @@ Every script prints its own numbers and writes to `results/` (gitignored, regene
 
 ## Subsystems
 
-1. **Ingestion & Entity Reconstruction** — normalizes transactions, derives a proxy account identity
-2. **Detection Engine** — population-level and per-entity behavioral deviation scoring
-3. **Typology Tagging** — descriptive, unscored labels (device mismatch, amount deviation, cold start)
-4. **Ring Detection** — shared-fingerprint clustering across entities
-5. **Gated Auto-Responder** — allow / review / decline, with a complete audit trail
-6. **Risk Console** — detection feed, explain panel, metrics view, ring viewer, audit trail
-7. **Demo Layer** — a realistic, payment-gateway-shaped synthetic stream, always visually separated from scored results
+1. **Ingestion & Entity Reconstruction:** normalizes transactions, derives a proxy account identity
+2. **Detection Engine:** population-level and per-entity behavioral deviation scoring
+3. **Typology Tagging:** descriptive, unscored labels (device mismatch, amount deviation, cold start)
+4. **Ring Detection:** shared-fingerprint clustering across entities
+5. **Gated Auto-Responder:** allow / review / decline, with a complete audit trail
+6. **Risk Console:** detection feed, explain panel, metrics view, ring viewer, audit trail
+7. **Demo Layer:** a realistic, payment-gateway-shaped synthetic stream, always visually separated from scored results
 
 ## Design principles
 

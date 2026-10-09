@@ -2,7 +2,7 @@ import Link from "next/link";
 import { StatTile } from "@/components/StatTile";
 import { PipelineDiagram } from "@/components/PipelineDiagram";
 import { HEADLINE } from "@/lib/headline-stats";
-import { GITHUB_URL } from "@/lib/site";
+import { GITHUB_REPO_URL, GITHUB_PROFILE_URL, AUTHOR_NAME } from "@/lib/site";
 
 const findings = [
   {
@@ -32,7 +32,7 @@ export default function LandingPage() {
             <Link href="/demo" className="text-text-muted hover:text-text transition-colors">
               Live demo
             </Link>
-            <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="text-text-muted hover:text-text transition-colors">
+            <a href={GITHUB_REPO_URL} target="_blank" rel="noreferrer" className="text-text-muted hover:text-text transition-colors">
               Source ↗
             </a>
           </div>
@@ -59,7 +59,7 @@ export default function LandingPage() {
               Explore the live demo →
             </Link>
             <a
-              href={GITHUB_URL}
+              href={GITHUB_REPO_URL}
               target="_blank"
               rel="noreferrer"
               className="rounded-md border border-border px-5 py-2.5 text-sm hover:border-border-strong transition-colors"
@@ -83,7 +83,7 @@ export default function LandingPage() {
         </section>
 
         {/* Pipeline */}
-        <section className="mx-auto max-w-5xl px-6 py-14 border-t border-border">
+        <section id="how-it-works" className="mx-auto max-w-5xl px-6 py-14 border-t border-border scroll-mt-16">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-text-muted mb-5">How it works</h2>
           <PipelineDiagram />
         </section>
@@ -146,7 +146,7 @@ export default function LandingPage() {
               Open the live demo →
             </Link>
             <a
-              href={GITHUB_URL}
+              href={GITHUB_REPO_URL}
               target="_blank"
               rel="noreferrer"
               className="rounded-md border border-border px-5 py-2.5 text-sm hover:border-border-strong transition-colors"
@@ -159,9 +159,11 @@ export default function LandingPage() {
 
       <footer className="border-t border-border py-8">
         <div className="mx-auto max-w-5xl px-6 flex items-center justify-between text-sm text-text-muted">
-          <span>Sentinel — an independent project.</span>
-          <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="hover:text-text transition-colors">
-            GitHub ↗
+          <a href={GITHUB_PROFILE_URL} target="_blank" rel="noreferrer" className="hover:text-text transition-colors">
+            {AUTHOR_NAME}
+          </a>
+          <a href={GITHUB_REPO_URL} target="_blank" rel="noreferrer" className="hover:text-text transition-colors">
+            View code ↗
           </a>
         </div>
       </footer>

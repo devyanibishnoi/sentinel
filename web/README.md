@@ -1,4 +1,4 @@
-# Sentinel — Portfolio Frontend
+# Sentinel: Portfolio Frontend
 
 A static, Vercel-deployable showcase of the Sentinel fraud detection engine (see the [root README](../README.md) for the actual project). This is **not** the real Risk Console, that's a live FastAPI app in `../console/`, not deployable to Vercel as-is. This is a separate, static site: a case-study landing page plus an interactive mini-console, backed by real (curated, not live) result data baked in at build time.
 

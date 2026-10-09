@@ -1,4 +1,4 @@
-# Sentinel — Product Requirements Document
+# Sentinel: Product Requirements Document
 
 **Status:** Draft v1.1
 **Owner:** Devyani Bishnoi
@@ -37,9 +37,9 @@ Digital payment fraud in India is real and growing fast, not a hypothetical: RBI
 
 ## 5. Users / personas
 
-**Primary — Risk analyst.** Needs to see what's flagged, why it's out of character *for that account*, and how confident, fast enough to act or escalate. Cares about false-positive rate above all.
+**Primary: Risk analyst.** Needs to see what's flagged, why it's out of character *for that account*, and how confident, fast enough to act or escalate. Cares about false-positive rate above all.
 
-**Secondary — the reviewer.** Cares whether the entity-baseline framing is real and defensible, and whether the console makes the rigor visible in under a minute rather than requiring a CSV to be read line by line.
+**Secondary: the reviewer.** Cares whether the entity-baseline framing is real and defensible, and whether the console makes the rigor visible in under a minute rather than requiring a CSV to be read line by line.
 
 ## 6. Success metrics
 
