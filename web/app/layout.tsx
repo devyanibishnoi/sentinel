@@ -14,10 +14,27 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500", "600"],
 });
 
+const title = "Sentinel: Behavioral Fraud Detection";
+const description =
+  "An entity-behavior fraud detection engine: UEBA-style baselines, ring detection, and a gated auto-responder, with every result honestly measured, including the negative ones.";
+
 export const metadata: Metadata = {
-  title: "Sentinel: Behavioral Fraud Detection",
-  description:
-    "An entity-behavior fraud detection engine: UEBA-style baselines, ring detection, and a gated auto-responder, with every result honestly measured, including the negative ones.",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
+  ),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

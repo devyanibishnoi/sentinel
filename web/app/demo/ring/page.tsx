@@ -15,7 +15,9 @@ export default function RingListPage() {
     <div className="mx-auto max-w-6xl px-6 py-8">
       <h1 className="text-2xl font-semibold mb-1">Ring Viewer</h1>
       <p className="text-text-muted text-sm mb-5">
-        Each row is a group of accounts that share a device fingerprint, how that&apos;s detected is explained on{" "}
+        A coordinated ring rarely trips any single transaction&apos;s score, each account can look individually
+        unremarkable. This view exists to catch that: accounts that share a device fingerprint, grouped and scored
+        as a cluster. How that&apos;s detected is explained on{" "}
         <Link href="/#how-it-works" className="text-accent hover:underline">
           the case study
         </Link>

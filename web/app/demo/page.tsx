@@ -27,7 +27,8 @@ export default function DetectionFeedPage() {
     <div className="mx-auto max-w-6xl px-6 py-8">
       <h1 className="text-2xl font-semibold mb-1">Detection Feed</h1>
       <p className="text-text-muted text-sm mb-5">
-        A curated excerpt of the real results, not the full 85,004-row file. See the{" "}
+        Click any row to see the actual reasoning behind that decision, this is where the &ldquo;explain every
+        flag&rdquo; claim gets tested. A curated excerpt of the real results, not the full 85,004-row file. See the{" "}
         <Link href="/" className="text-accent hover:underline">
           case study
         </Link>{" "}

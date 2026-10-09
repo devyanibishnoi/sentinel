@@ -2,6 +2,8 @@ import comparisonData from "@/data/comparison.json";
 import baselinesData from "@/data/baselines.json";
 import { BaselineRow, ComparisonRow } from "@/lib/types";
 import { Caveat } from "@/components/Caveat";
+import { StatTile } from "@/components/StatTile";
+import { BarChart } from "@/components/BarChart";
 
 const comparison = [...(comparisonData.results as ComparisonRow[])].sort(
   (a, b) => b.pr_auc_full_test - a.pr_auc_full_test
@@ -9,47 +11,58 @@ const comparison = [...(comparisonData.results as ComparisonRow[])].sort(
 const baselines = baselinesData as BaselineRow[];
 const diag = comparisonData.history_depth_diagnostic;
 
-function StatTile({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="rounded-lg border border-border bg-surface p-4">
-      <div className="text-2xl font-semibold font-mono">{value}</div>
-      <div className="text-xs text-text-muted mt-1">{label}</div>
-    </div>
-  );
-}
+const chartData = comparison.map((r, i) => ({
+  label: r.method
+    .replace("isolation_forest (population-only)", "IsolationForest, population-only")
+    .replace("isolation_forest (population + entity-deviation)", "IsolationForest, +entity-deviation")
+    .replace(/\s*\(.*\)/, ""),
+  value: r.pr_auc_full_test,
+  emphasis: i === 0,
+}));
 
 export default function MetricsPage() {
   return (
     <div className="mx-auto max-w-6xl px-6 py-8">
       <h1 className="text-2xl font-semibold mb-1">Metrics</h1>
       <p className="text-text-muted text-sm mb-5">
-        Every number below comes from the held-out BENCHMARK test split only, 85,004 transactions. The demo stream
+        Start here if you&apos;re only checking one page, every number quoted elsewhere on this site traces back to
+        this one. All of it comes from the held-out BENCHMARK test split only, 85,004 transactions. The demo stream
         never contributes to a reported metric.
       </p>
 
       <h2 className="text-sm font-semibold uppercase tracking-wide text-text-muted mt-8 mb-3">
-        Detector vs. all four baselines, same metric (PR-AUC)
+        Detector vs. all four required baselines (PR-AUC)
       </h2>
-      <div className="overflow-x-auto rounded-lg border border-border mb-8">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="text-left text-xs uppercase tracking-wide text-text-muted border-b border-border">
-              <th className="px-3 py-2 font-medium">Method</th>
-              <th className="px-3 py-2 font-medium">PR-AUC (full test)</th>
-              <th className="px-3 py-2 font-medium">PR-AUC (has-history only)</th>
-            </tr>
-          </thead>
-          <tbody>
-            {comparison.map((r) => (
-              <tr key={r.method} className="border-b border-border last:border-0">
-                <td className="px-3 py-2">{r.method}</td>
-                <td className="px-3 py-2 font-mono">{r.pr_auc_full_test.toFixed(4)}</td>
-                <td className="px-3 py-2 font-mono text-text-muted">{r.pr_auc_has_history_only.toFixed(4)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="rounded-lg border border-border bg-surface p-6 mb-3">
+        <BarChart data={chartData} />
       </div>
+      <details className="mb-8 text-xs text-text-muted">
+        <summary className="cursor-pointer hover:text-text transition-colors w-fit">
+          Also show PR-AUC restricted to has-history rows only
+        </summary>
+        <div className="overflow-x-auto rounded-lg border border-border mt-3">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-left text-xs uppercase tracking-wide text-text-muted border-b border-border">
+                <th className="px-3 py-2 font-medium">Method</th>
+                <th className="px-3 py-2 font-medium">PR-AUC (full test)</th>
+                <th className="px-3 py-2 font-medium">PR-AUC (has-history only)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparison.map((r) => (
+                <tr key={r.method} className="border-b border-border last:border-0">
+                  <td className="px-3 py-2">{r.method}</td>
+                  <td className="px-3 py-2 font-mono tabular-nums">{r.pr_auc_full_test.toFixed(4)}</td>
+                  <td className="px-3 py-2 font-mono tabular-nums text-text-muted">
+                    {r.pr_auc_has_history_only.toFixed(4)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </details>
 
       <h2 className="text-sm font-semibold uppercase tracking-wide text-text-muted mt-8 mb-3">
         The entity-vs-population lift, and why it&apos;s not positive
@@ -76,19 +89,19 @@ export default function MetricsPage() {
         <table className="w-full text-sm">
           <thead>
             <tr className="text-left text-xs uppercase tracking-wide text-text-muted border-b border-border">
-              <th className="px-3 py-2 font-medium">Baseline</th>
-              <th className="px-3 py-2 font-medium">Precision</th>
-              <th className="px-3 py-2 font-medium">Recall</th>
-              <th className="px-3 py-2 font-medium">FPR</th>
+              <th className="px-3 py-2.5 font-medium">Baseline</th>
+              <th className="px-3 py-2.5 font-medium">Precision</th>
+              <th className="px-3 py-2.5 font-medium">Recall</th>
+              <th className="px-3 py-2.5 font-medium">FPR</th>
             </tr>
           </thead>
           <tbody>
             {baselines.map((b) => (
               <tr key={b.baseline} className="border-b border-border last:border-0">
-                <td className="px-3 py-2">{b.baseline}</td>
-                <td className="px-3 py-2 font-mono">{b.precision.toFixed(4)}</td>
-                <td className="px-3 py-2 font-mono">{b.recall.toFixed(4)}</td>
-                <td className="px-3 py-2 font-mono">{b.fpr.toFixed(4)}</td>
+                <td className="px-3 py-2.5">{b.baseline}</td>
+                <td className="px-3 py-2.5 font-mono tabular-nums">{b.precision.toFixed(4)}</td>
+                <td className="px-3 py-2.5 font-mono tabular-nums">{b.recall.toFixed(4)}</td>
+                <td className="px-3 py-2.5 font-mono tabular-nums">{b.fpr.toFixed(4)}</td>
               </tr>
             ))}
           </tbody>

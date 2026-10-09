@@ -26,7 +26,8 @@ export default function AuditTrailPage() {
     <div className="mx-auto max-w-6xl px-6 py-8">
       <h1 className="text-2xl font-semibold mb-1">Audit Trail</h1>
       <p className="text-text-muted text-sm mb-5">
-        Every decision writes a record here, including every refusal to act, a curated excerpt of{" "}
+        Built to answer &ldquo;why did the system do that&rdquo; for any transaction, not just the ones that got
+        flagged, every decision writes a record here, including every refusal to act. A curated excerpt of{" "}
         {rows.length.toLocaleString()} of the {source === "benchmark" ? "85,004" : "123"} real records.
       </p>
       <SourceToggle source={source} onChange={(s) => { setSource(s); setPage(1); }} />
