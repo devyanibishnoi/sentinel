@@ -22,7 +22,7 @@ export function DecisionBadge({ decision }: { decision: Decision }) {
 export function SourceBadge({ source }: { source: Source }) {
   if (source === "benchmark") {
     return (
-      <span className="inline-block rounded px-2 py-0.5 text-xs font-medium tracking-wide bg-accent-bg text-accent">
+      <span className="inline-block rounded px-2 py-0.5 text-xs font-medium tracking-wide border border-border-strong text-text">
         benchmark
       </span>
     );
