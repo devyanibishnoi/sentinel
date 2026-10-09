@@ -1,0 +1,49 @@
+{
+  "test_rows": 85004,
+  "has_history_rows": 30041,
+  "has_history_share": 0.3534068984988942,
+  "results": [
+    {
+      "method": "random_prior",
+      "pr_auc_full_test": 0.04535971202481659,
+      "pr_auc_has_history_only": 0.03833600141007519
+    },
+    {
+      "method": "rule_population (raw amount)",
+      "pr_auc_full_test": 0.04668656678863119,
+      "pr_auc_has_history_only": 0.05550853670402625
+    },
+    {
+      "method": "statistical_population (|z| vs population)",
+      "pr_auc_full_test": 0.05462398504159596,
+      "pr_auc_has_history_only": 0.0488330624079922
+    },
+    {
+      "method": "rule_entity (ratio to own prior max)",
+      "pr_auc_full_test": 0.04670642520237253,
+      "pr_auc_has_history_only": 0.03732484646868534
+    },
+    {
+      "method": "statistical_entity (|z| vs own history)",
+      "pr_auc_full_test": 0.04462927007773717,
+      "pr_auc_has_history_only": 0.038236218951237334
+    },
+    {
+      "method": "isolation_forest (population-only)",
+      "pr_auc_full_test": 0.1656367216431446,
+      "pr_auc_has_history_only": 0.063928938152083
+    },
+    {
+      "method": "isolation_forest (population + entity-deviation)",
+      "pr_auc_full_test": 0.15566992375402522,
+      "pr_auc_has_history_only": 0.061997184684957005
+    }
+  ],
+  "history_depth_diagnostic": {
+    "median_prior_count_among_has_history": 2.0,
+    "exactly_one_prior_count": 12282,
+    "exactly_one_prior_share_of_has_history": 0.4088412502912686,
+    "two_plus_prior_count": 17759,
+    "conclusion": "Entity-deviation shows no PR-AUC lift over population-only, even restricted to has-history rows. Root cause: most account histories in this dataset are too thin to baseline against, not a fingerprint or split artifact, both were fixed and the result held."
+  }
+}

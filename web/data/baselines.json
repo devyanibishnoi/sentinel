@@ -1,0 +1,57 @@
+[
+  {
+    "baseline": "random_prior",
+    "precision": 0.0461419154711128,
+    "recall": 0.0306306306306306,
+    "fpr": 0.0303258176259569,
+    "tp": 119,
+    "fp": 2460,
+    "fn": 3766,
+    "tn": 78659,
+    "note": "fraud_rate=0.0304 from train"
+  },
+  {
+    "baseline": "rule_population",
+    "precision": 0.0562174861553952,
+    "recall": 0.0862290862290862,
+    "fpr": 0.0693302432229194,
+    "tp": 335,
+    "fp": 5624,
+    "fn": 3550,
+    "tn": 75495,
+    "note": "amount > train p0.95 = 411.95 (chosen on val)"
+  },
+  {
+    "baseline": "statistical_population",
+    "precision": 0.0503875968992248,
+    "recall": 0.0435006435006435,
+    "fpr": 0.0392633045279157,
+    "tp": 169,
+    "fp": 3185,
+    "fn": 3716,
+    "tn": 77934,
+    "note": "|z| > 2 vs train mean/std (chosen on val)"
+  },
+  {
+    "baseline": "rule_entity",
+    "precision": 0.0297600498597693,
+    "recall": 0.169626998223801,
+    "fpr": 0.2153553518934809,
+    "tp": 191,
+    "fp": 6227,
+    "fn": 935,
+    "tn": 22688,
+    "note": "new record-high amount for this entity; 64.7% of test rows are cold-start, excluded"
+  },
+  {
+    "baseline": "statistical_entity",
+    "precision": 0.0403155127081507,
+    "recall": 0.1837549933422103,
+    "fpr": 0.1931444026340545,
+    "tp": 138,
+    "fp": 3285,
+    "fn": 613,
+    "tn": 13723,
+    "note": "|z| > 2 vs this entity's own prior mean/std (chosen on val); 79.1% of test rows lack 2+ prior transactions, excluded"
+  }
+]

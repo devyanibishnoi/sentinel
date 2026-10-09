@@ -1,0 +1,1099 @@
+{
+  "caveat": "proxy_fraud_rate is a DERIVED PROXY, not verified ground truth",
+  "clusters": [
+    {
+      "cluster_id": "ring_12",
+      "entities": [
+        "15773_226.0_150.0_mastercard_102.0_credit_123.0_87.0_174.0",
+        "15773_226.0_150.0_mastercard_102.0_credit_325.0_87.0_174.0",
+        "16075_514.0_150.0_mastercard_102.0_credit_123.0_87.0_174.0",
+        "16075_514.0_150.0_mastercard_102.0_credit_264.0_87.0_175.0"
+      ],
+      "n_entities": 4,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 1.0,
+      "edges": [
+        {
+          "entity_id": "15773_226.0_150.0_mastercard_102.0_credit_123.0_87.0_174.0",
+          "DeviceInfo": "Z965 Build/NMF26V"
+        },
+        {
+          "entity_id": "15773_226.0_150.0_mastercard_102.0_credit_325.0_87.0_174.0",
+          "DeviceInfo": "Z965 Build/NMF26V"
+        },
+        {
+          "entity_id": "16075_514.0_150.0_mastercard_102.0_credit_123.0_87.0_174.0",
+          "DeviceInfo": "Z965 Build/NMF26V"
+        },
+        {
+          "entity_id": "16075_514.0_150.0_mastercard_102.0_credit_264.0_87.0_175.0",
+          "DeviceInfo": "Z965 Build/NMF26V"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_41",
+      "entities": [
+        "unmatched_3453359",
+        "unmatched_3453423",
+        "unmatched_3453432",
+        "unmatched_3495166",
+        "unmatched_3495186",
+        "unmatched_3570979",
+        "unmatched_3571000"
+      ],
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 1.0,
+      "edges": [
+        {
+          "entity_id": "unmatched_3453359",
+          "DeviceInfo": "Lenovo YT3-850M Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3453423",
+          "DeviceInfo": "Lenovo YT3-850M Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3453432",
+          "DeviceInfo": "Lenovo YT3-850M Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3495166",
+          "DeviceInfo": "Lenovo YT3-850M Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3495186",
+          "DeviceInfo": "Lenovo YT3-850M Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3570979",
+          "DeviceInfo": "Lenovo YT3-850M Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3571000",
+          "DeviceInfo": "Lenovo YT3-850M Build/MMB29M"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_50",
+      "entities": [
+        "unmatched_3473290",
+        "unmatched_3536916",
+        "unmatched_3537499",
+        "unmatched_3537500",
+        "unmatched_3537502",
+        "unmatched_3537503",
+        "unmatched_3537710",
+        "unmatched_3537713",
+        "unmatched_3537792",
+        "unmatched_3540349",
+        "unmatched_3553114",
+        "unmatched_3553122"
+      ],
+      "n_entities": 12,
+      "n_transactions": 12,
+      "proxy_fraud_rate": 1.0,
+      "edges": [
+        {
+          "entity_id": "unmatched_3473290",
+          "DeviceInfo": "G3123 Build/40.0.A.6.175"
+        },
+        {
+          "entity_id": "unmatched_3536916",
+          "DeviceInfo": "G3123 Build/40.0.A.6.175"
+        },
+        {
+          "entity_id": "unmatched_3537499",
+          "DeviceInfo": "G3123 Build/40.0.A.6.175"
+        },
+        {
+          "entity_id": "unmatched_3537500",
+          "DeviceInfo": "G3123 Build/40.0.A.6.175"
+        },
+        {
+          "entity_id": "unmatched_3537502",
+          "DeviceInfo": "G3123 Build/40.0.A.6.175"
+        },
+        {
+          "entity_id": "unmatched_3537503",
+          "DeviceInfo": "G3123 Build/40.0.A.6.175"
+        },
+        {
+          "entity_id": "unmatched_3537710",
+          "DeviceInfo": "G3123 Build/40.0.A.6.175"
+        },
+        {
+          "entity_id": "unmatched_3537713",
+          "DeviceInfo": "G3123 Build/40.0.A.6.175"
+        },
+        {
+          "entity_id": "unmatched_3537792",
+          "DeviceInfo": "G3123 Build/40.0.A.6.175"
+        },
+        {
+          "entity_id": "unmatched_3540349",
+          "DeviceInfo": "G3123 Build/40.0.A.6.175"
+        },
+        {
+          "entity_id": "unmatched_3553114",
+          "DeviceInfo": "G3123 Build/40.0.A.6.175"
+        },
+        {
+          "entity_id": "unmatched_3553122",
+          "DeviceInfo": "G3123 Build/40.0.A.6.175"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_60",
+      "entities": [
+        "unmatched_3510876",
+        "unmatched_3510880",
+        "unmatched_3514767",
+        "unmatched_3521485",
+        "unmatched_3521505"
+      ],
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 1.0,
+      "edges": [
+        {
+          "entity_id": "unmatched_3510876",
+          "DeviceInfo": "MotoG3-TE Build/MPD24.65-33"
+        },
+        {
+          "entity_id": "unmatched_3510880",
+          "DeviceInfo": "MotoG3-TE Build/MPD24.65-33"
+        },
+        {
+          "entity_id": "unmatched_3514767",
+          "DeviceInfo": "MotoG3-TE Build/MPD24.65-33"
+        },
+        {
+          "entity_id": "unmatched_3521485",
+          "DeviceInfo": "MotoG3-TE Build/MPD24.65-33"
+        },
+        {
+          "entity_id": "unmatched_3521505",
+          "DeviceInfo": "MotoG3-TE Build/MPD24.65-33"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_63",
+      "entities": [
+        "unmatched_3527059",
+        "unmatched_3540663",
+        "unmatched_3541008",
+        "unmatched_3541013",
+        "unmatched_3541411",
+        "unmatched_3541415",
+        "unmatched_3541419",
+        "unmatched_3541425"
+      ],
+      "n_entities": 8,
+      "n_transactions": 8,
+      "proxy_fraud_rate": 1.0,
+      "edges": [
+        {
+          "entity_id": "unmatched_3527059",
+          "DeviceInfo": "SM-J700T Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3540663",
+          "DeviceInfo": "SM-J700T Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3541008",
+          "DeviceInfo": "SM-J700T Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3541013",
+          "DeviceInfo": "SM-J700T Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3541411",
+          "DeviceInfo": "SM-J700T Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3541415",
+          "DeviceInfo": "SM-J700T Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3541419",
+          "DeviceInfo": "SM-J700T Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3541425",
+          "DeviceInfo": "SM-J700T Build/MMB29K"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_67",
+      "entities": [
+        "unmatched_3539310",
+        "unmatched_3542148",
+        "unmatched_3542159",
+        "unmatched_3542182",
+        "unmatched_3542186",
+        "unmatched_3542189",
+        "unmatched_3542194",
+        "unmatched_3542203",
+        "unmatched_3542210"
+      ],
+      "n_entities": 9,
+      "n_transactions": 9,
+      "proxy_fraud_rate": 1.0,
+      "edges": [
+        {
+          "entity_id": "unmatched_3539310",
+          "DeviceInfo": "SAMSUNG SM-G550T1 Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3542148",
+          "DeviceInfo": "SAMSUNG SM-G550T1 Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3542159",
+          "DeviceInfo": "SAMSUNG SM-G550T1 Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3542182",
+          "DeviceInfo": "SAMSUNG SM-G550T1 Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3542186",
+          "DeviceInfo": "SAMSUNG SM-G550T1 Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3542189",
+          "DeviceInfo": "SAMSUNG SM-G550T1 Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3542194",
+          "DeviceInfo": "SAMSUNG SM-G550T1 Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3542203",
+          "DeviceInfo": "SAMSUNG SM-G550T1 Build/MMB29K"
+        },
+        {
+          "entity_id": "unmatched_3542210",
+          "DeviceInfo": "SAMSUNG SM-G550T1 Build/MMB29K"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_68",
+      "entities": [
+        "unmatched_3551907",
+        "unmatched_3552791",
+        "unmatched_3552797",
+        "unmatched_3552831",
+        "unmatched_3552840"
+      ],
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 1.0,
+      "edges": [
+        {
+          "entity_id": "unmatched_3551907",
+          "DeviceInfo": "RNE-L23 Build/HUAWEIRNE-L23"
+        },
+        {
+          "entity_id": "unmatched_3552791",
+          "DeviceInfo": "RNE-L23 Build/HUAWEIRNE-L23"
+        },
+        {
+          "entity_id": "unmatched_3552797",
+          "DeviceInfo": "RNE-L23 Build/HUAWEIRNE-L23"
+        },
+        {
+          "entity_id": "unmatched_3552831",
+          "DeviceInfo": "RNE-L23 Build/HUAWEIRNE-L23"
+        },
+        {
+          "entity_id": "unmatched_3552840",
+          "DeviceInfo": "RNE-L23 Build/HUAWEIRNE-L23"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_1",
+      "entities": [
+        "10165_562.0_150.0_mastercard_219.0_credit_204.0_87.0_176.0",
+        "10165_562.0_150.0_mastercard_219.0_credit_428.0_87.0_176.0",
+        "14856_555.0_150.0_visa_226.0_debit_204.0_87.0_177.0",
+        "15186_512.0_150.0_mastercard_224.0_debit_181.0_87.0_176.0",
+        "16478_555.0_204.0_visa_138.0_debit_204.0_87.0_177.0",
+        "3613_186.0_150.0_mastercard_224.0_debit_428.0_87.0_176.0",
+        "3821_111.0_150.0_mastercard_219.0_credit_181.0_87.0_176.0",
+        "7299_111.0_150.0_mastercard_195.0_debit_204.0_87.0_177.0",
+        "8691_599.0_150.0_visa_166.0_debit_204.0_87.0_177.0",
+        "unmatched_3506236"
+      ],
+      "n_entities": 10,
+      "n_transactions": 10,
+      "proxy_fraud_rate": 0.9,
+      "edges": [
+        {
+          "entity_id": "10165_562.0_150.0_mastercard_219.0_credit_204.0_87.0_176.0",
+          "DeviceInfo": "FRD-L09 Build/HUAWEIFRD-L09"
+        },
+        {
+          "entity_id": "10165_562.0_150.0_mastercard_219.0_credit_428.0_87.0_176.0",
+          "DeviceInfo": "FRD-L09 Build/HUAWEIFRD-L09"
+        },
+        {
+          "entity_id": "14856_555.0_150.0_visa_226.0_debit_204.0_87.0_177.0",
+          "DeviceInfo": "FRD-L09 Build/HUAWEIFRD-L09"
+        },
+        {
+          "entity_id": "15186_512.0_150.0_mastercard_224.0_debit_181.0_87.0_176.0",
+          "DeviceInfo": "FRD-L09 Build/HUAWEIFRD-L09"
+        },
+        {
+          "entity_id": "16478_555.0_204.0_visa_138.0_debit_204.0_87.0_177.0",
+          "DeviceInfo": "FRD-L09 Build/HUAWEIFRD-L09"
+        },
+        {
+          "entity_id": "3613_186.0_150.0_mastercard_224.0_debit_428.0_87.0_176.0",
+          "DeviceInfo": "FRD-L09 Build/HUAWEIFRD-L09"
+        },
+        {
+          "entity_id": "3821_111.0_150.0_mastercard_219.0_credit_181.0_87.0_176.0",
+          "DeviceInfo": "FRD-L09 Build/HUAWEIFRD-L09"
+        },
+        {
+          "entity_id": "7299_111.0_150.0_mastercard_195.0_debit_204.0_87.0_177.0",
+          "DeviceInfo": "FRD-L09 Build/HUAWEIFRD-L09"
+        },
+        {
+          "entity_id": "8691_599.0_150.0_visa_166.0_debit_204.0_87.0_177.0",
+          "DeviceInfo": "FRD-L09 Build/HUAWEIFRD-L09"
+        },
+        {
+          "entity_id": "unmatched_3506236",
+          "DeviceInfo": "FRD-L09 Build/HUAWEIFRD-L09"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_66",
+      "entities": [
+        "unmatched_3534942",
+        "unmatched_3534946",
+        "unmatched_3539884",
+        "unmatched_3539888",
+        "unmatched_3548317",
+        "unmatched_3552496",
+        "unmatched_3555510",
+        "unmatched_3555658"
+      ],
+      "n_entities": 8,
+      "n_transactions": 8,
+      "proxy_fraud_rate": 0.875,
+      "edges": [
+        {
+          "entity_id": "unmatched_3534942",
+          "DeviceInfo": "Windows NT 6.2"
+        },
+        {
+          "entity_id": "unmatched_3534946",
+          "DeviceInfo": "Windows NT 6.2"
+        },
+        {
+          "entity_id": "unmatched_3539884",
+          "DeviceInfo": "Windows NT 6.2"
+        },
+        {
+          "entity_id": "unmatched_3539888",
+          "DeviceInfo": "Windows NT 6.2"
+        },
+        {
+          "entity_id": "unmatched_3548317",
+          "DeviceInfo": "Windows NT 6.2"
+        },
+        {
+          "entity_id": "unmatched_3552496",
+          "DeviceInfo": "Windows NT 6.2"
+        },
+        {
+          "entity_id": "unmatched_3555510",
+          "DeviceInfo": "Windows NT 6.2"
+        },
+        {
+          "entity_id": "unmatched_3555658",
+          "DeviceInfo": "Windows NT 6.2"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_45",
+      "entities": [
+        "unmatched_3464767",
+        "unmatched_3468067",
+        "unmatched_3474046",
+        "unmatched_3474081",
+        "unmatched_3474094",
+        "unmatched_3475344",
+        "unmatched_3475536",
+        "unmatched_3475543",
+        "unmatched_3475553",
+        "unmatched_3479006",
+        "unmatched_3479018",
+        "unmatched_3518584",
+        "unmatched_3527618"
+      ],
+      "n_entities": 13,
+      "n_transactions": 13,
+      "proxy_fraud_rate": 0.8461538461538461,
+      "edges": [
+        {
+          "entity_id": "unmatched_3464767",
+          "DeviceInfo": "Lenovo TB3-710I Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3468067",
+          "DeviceInfo": "Lenovo TB3-710I Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3474046",
+          "DeviceInfo": "Lenovo TB3-710I Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3474081",
+          "DeviceInfo": "Lenovo TB3-710I Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3474094",
+          "DeviceInfo": "Lenovo TB3-710I Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3475344",
+          "DeviceInfo": "Lenovo TB3-710I Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3475536",
+          "DeviceInfo": "Lenovo TB3-710I Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3475543",
+          "DeviceInfo": "Lenovo TB3-710I Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3475553",
+          "DeviceInfo": "Lenovo TB3-710I Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3479006",
+          "DeviceInfo": "Lenovo TB3-710I Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3479018",
+          "DeviceInfo": "Lenovo TB3-710I Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3518584",
+          "DeviceInfo": "Lenovo TB3-710I Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3527618",
+          "DeviceInfo": "Lenovo TB3-710I Build/LMY47I"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_59",
+      "entities": [
+        "unmatched_3506726",
+        "unmatched_3575229",
+        "unmatched_3575230",
+        "unmatched_3577351",
+        "unmatched_3577354"
+      ],
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.8,
+      "edges": [
+        {
+          "entity_id": "unmatched_3506726",
+          "DeviceInfo": "SM-G610F Build/NRD90M"
+        },
+        {
+          "entity_id": "unmatched_3575229",
+          "DeviceInfo": "SM-G610F Build/NRD90M"
+        },
+        {
+          "entity_id": "unmatched_3575230",
+          "DeviceInfo": "SM-G610F Build/NRD90M"
+        },
+        {
+          "entity_id": "unmatched_3577351",
+          "DeviceInfo": "SM-G610F Build/NRD90M"
+        },
+        {
+          "entity_id": "unmatched_3577354",
+          "DeviceInfo": "SM-G610F Build/NRD90M"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_64",
+      "entities": [
+        "unmatched_3530824",
+        "unmatched_3534502",
+        "unmatched_3548635",
+        "unmatched_3548637",
+        "unmatched_3548743"
+      ],
+      "n_entities": 5,
+      "n_transactions": 5,
+      "proxy_fraud_rate": 0.8,
+      "edges": [
+        {
+          "entity_id": "unmatched_3530824",
+          "DeviceInfo": "G3423"
+        },
+        {
+          "entity_id": "unmatched_3534502",
+          "DeviceInfo": "G3423"
+        },
+        {
+          "entity_id": "unmatched_3548635",
+          "DeviceInfo": "G3423"
+        },
+        {
+          "entity_id": "unmatched_3548637",
+          "DeviceInfo": "G3423"
+        },
+        {
+          "entity_id": "unmatched_3548743",
+          "DeviceInfo": "G3423"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_21",
+      "entities": [
+        "unmatched_3437210",
+        "unmatched_3437213",
+        "unmatched_3438084",
+        "unmatched_3438228",
+        "unmatched_3438379",
+        "unmatched_3438380",
+        "unmatched_3438381",
+        "unmatched_3438382",
+        "unmatched_3438383",
+        "unmatched_3438385",
+        "unmatched_3439573",
+        "unmatched_3445701",
+        "unmatched_3447033",
+        "unmatched_3447043",
+        "unmatched_3465824",
+        "unmatched_3469633",
+        "unmatched_3498316",
+        "unmatched_3543502"
+      ],
+      "n_entities": 18,
+      "n_transactions": 18,
+      "proxy_fraud_rate": 0.7777777777777778,
+      "edges": [
+        {
+          "entity_id": "unmatched_3437210",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3437213",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3438084",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3438228",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3438379",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3438380",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3438381",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3438382",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3438383",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3438385",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3439573",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3445701",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3447033",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3447043",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3465824",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3469633",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3498316",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        },
+        {
+          "entity_id": "unmatched_3543502",
+          "DeviceInfo": "Hisense L675 Build/MRA58K"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_56",
+      "entities": [
+        "unmatched_3486863",
+        "unmatched_3486876",
+        "unmatched_3486883",
+        "unmatched_3486886",
+        "unmatched_3486934",
+        "unmatched_3486939",
+        "unmatched_3486943",
+        "unmatched_3488935",
+        "unmatched_3488936",
+        "unmatched_3542643",
+        "unmatched_3559987",
+        "unmatched_3565350"
+      ],
+      "n_entities": 12,
+      "n_transactions": 12,
+      "proxy_fraud_rate": 0.75,
+      "edges": [
+        {
+          "entity_id": "unmatched_3486863",
+          "DeviceInfo": "BLADE V8Q Build/N2G47H"
+        },
+        {
+          "entity_id": "unmatched_3486876",
+          "DeviceInfo": "BLADE V8Q Build/N2G47H"
+        },
+        {
+          "entity_id": "unmatched_3486883",
+          "DeviceInfo": "BLADE V8Q Build/N2G47H"
+        },
+        {
+          "entity_id": "unmatched_3486886",
+          "DeviceInfo": "BLADE V8Q Build/N2G47H"
+        },
+        {
+          "entity_id": "unmatched_3486934",
+          "DeviceInfo": "BLADE V8Q Build/N2G47H"
+        },
+        {
+          "entity_id": "unmatched_3486939",
+          "DeviceInfo": "BLADE V8Q Build/N2G47H"
+        },
+        {
+          "entity_id": "unmatched_3486943",
+          "DeviceInfo": "BLADE V8Q Build/N2G47H"
+        },
+        {
+          "entity_id": "unmatched_3488935",
+          "DeviceInfo": "BLADE V8Q Build/N2G47H"
+        },
+        {
+          "entity_id": "unmatched_3488936",
+          "DeviceInfo": "BLADE V8Q Build/N2G47H"
+        },
+        {
+          "entity_id": "unmatched_3542643",
+          "DeviceInfo": "BLADE V8Q Build/N2G47H"
+        },
+        {
+          "entity_id": "unmatched_3559987",
+          "DeviceInfo": "BLADE V8Q Build/N2G47H"
+        },
+        {
+          "entity_id": "unmatched_3565350",
+          "DeviceInfo": "BLADE V8Q Build/N2G47H"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_6",
+      "entities": [
+        "11839_490.0_150.0_visa_226.0_debit_123.0_87.0_181.0",
+        "7664_490.0_150.0_visa_226.0_debit_264.0_87.0_181.0"
+      ],
+      "n_entities": 2,
+      "n_transactions": 11,
+      "proxy_fraud_rate": 0.7272727272727273,
+      "edges": [
+        {
+          "entity_id": "11839_490.0_150.0_visa_226.0_debit_123.0_87.0_181.0",
+          "DeviceInfo": "Z835 Build/NMF26V"
+        },
+        {
+          "entity_id": "11839_490.0_150.0_visa_226.0_debit_123.0_87.0_181.0",
+          "DeviceInfo": "Windows"
+        },
+        {
+          "entity_id": "7664_490.0_150.0_visa_226.0_debit_264.0_87.0_181.0",
+          "DeviceInfo": "Z835 Build/NMF26V"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_52",
+      "entities": [
+        "unmatched_3479576",
+        "unmatched_3510777",
+        "unmatched_3510780",
+        "unmatched_3510782",
+        "unmatched_3513456",
+        "unmatched_3513461",
+        "unmatched_3545897"
+      ],
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.7142857142857143,
+      "edges": [
+        {
+          "entity_id": "unmatched_3479576",
+          "DeviceInfo": "5025G Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3510777",
+          "DeviceInfo": "5025G Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3510780",
+          "DeviceInfo": "5025G Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3510782",
+          "DeviceInfo": "5025G Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3513456",
+          "DeviceInfo": "5025G Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3513461",
+          "DeviceInfo": "5025G Build/LMY47I"
+        },
+        {
+          "entity_id": "unmatched_3545897",
+          "DeviceInfo": "5025G Build/LMY47I"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_47",
+      "entities": [
+        "unmatched_3465049",
+        "unmatched_3465221",
+        "unmatched_3478399",
+        "unmatched_3499313",
+        "unmatched_3534588",
+        "unmatched_3537493",
+        "unmatched_3547076",
+        "unmatched_3552854",
+        "unmatched_3552914",
+        "unmatched_3552921",
+        "unmatched_3552924",
+        "unmatched_3552929",
+        "unmatched_3552934",
+        "unmatched_3552940",
+        "unmatched_3552943"
+      ],
+      "n_entities": 15,
+      "n_transactions": 15,
+      "proxy_fraud_rate": 0.6666666666666666,
+      "edges": [
+        {
+          "entity_id": "unmatched_3465049",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        },
+        {
+          "entity_id": "unmatched_3465221",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        },
+        {
+          "entity_id": "unmatched_3478399",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        },
+        {
+          "entity_id": "unmatched_3499313",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        },
+        {
+          "entity_id": "unmatched_3534588",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        },
+        {
+          "entity_id": "unmatched_3537493",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        },
+        {
+          "entity_id": "unmatched_3547076",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        },
+        {
+          "entity_id": "unmatched_3552854",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        },
+        {
+          "entity_id": "unmatched_3552914",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        },
+        {
+          "entity_id": "unmatched_3552921",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        },
+        {
+          "entity_id": "unmatched_3552924",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        },
+        {
+          "entity_id": "unmatched_3552929",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        },
+        {
+          "entity_id": "unmatched_3552934",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        },
+        {
+          "entity_id": "unmatched_3552940",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        },
+        {
+          "entity_id": "unmatched_3552943",
+          "DeviceInfo": "SM-A300H Build/LRX22G"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_16",
+      "entities": [
+        "17321_111.0_150.0_visa_226.0_debit_472.0_87.0_143.0",
+        "8233_555.0_150.0_mastercard_117.0_debit_330.0_87.0_171.0",
+        "8908_583.0_150.0_visa_226.0_credit_264.0_87.0_151.0",
+        "unmatched_3503908",
+        "unmatched_3503928",
+        "unmatched_3519046",
+        "unmatched_3520169",
+        "unmatched_3520188",
+        "unmatched_3520202",
+        "unmatched_3564629",
+        "unmatched_3564632",
+        "unmatched_3564637",
+        "unmatched_3564643",
+        "unmatched_3564645"
+      ],
+      "n_entities": 14,
+      "n_transactions": 17,
+      "proxy_fraud_rate": 0.6470588235294118,
+      "edges": [
+        {
+          "entity_id": "17321_111.0_150.0_visa_226.0_debit_472.0_87.0_143.0",
+          "DeviceInfo": "SM-J327P Build/MMB29M"
+        },
+        {
+          "entity_id": "8233_555.0_150.0_mastercard_117.0_debit_330.0_87.0_171.0",
+          "DeviceInfo": "SM-J327P Build/MMB29M"
+        },
+        {
+          "entity_id": "8908_583.0_150.0_visa_226.0_credit_264.0_87.0_151.0",
+          "DeviceInfo": "SM-J327P Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3503908",
+          "DeviceInfo": "SM-J327P Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3503928",
+          "DeviceInfo": "SM-J327P Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3519046",
+          "DeviceInfo": "SM-J327P Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3520169",
+          "DeviceInfo": "SM-J327P Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3520188",
+          "DeviceInfo": "SM-J327P Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3520202",
+          "DeviceInfo": "SM-J327P Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3564629",
+          "DeviceInfo": "SM-J327P Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3564632",
+          "DeviceInfo": "SM-J327P Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3564637",
+          "DeviceInfo": "SM-J327P Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3564643",
+          "DeviceInfo": "SM-J327P Build/MMB29M"
+        },
+        {
+          "entity_id": "unmatched_3564645",
+          "DeviceInfo": "SM-J327P Build/MMB29M"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_31",
+      "entities": [
+        "unmatched_3444166",
+        "unmatched_3447985",
+        "unmatched_3450989",
+        "unmatched_3451480",
+        "unmatched_3456858",
+        "unmatched_3456878",
+        "unmatched_3456883",
+        "unmatched_3456884",
+        "unmatched_3456909",
+        "unmatched_3456910",
+        "unmatched_3467344",
+        "unmatched_3496899"
+      ],
+      "n_entities": 12,
+      "n_transactions": 12,
+      "proxy_fraud_rate": 0.5833333333333334,
+      "edges": [
+        {
+          "entity_id": "unmatched_3444166",
+          "DeviceInfo": "moto x4 Build/OPWS27.57-40-6"
+        },
+        {
+          "entity_id": "unmatched_3447985",
+          "DeviceInfo": "moto x4 Build/OPWS27.57-40-6"
+        },
+        {
+          "entity_id": "unmatched_3450989",
+          "DeviceInfo": "moto x4 Build/OPWS27.57-40-6"
+        },
+        {
+          "entity_id": "unmatched_3451480",
+          "DeviceInfo": "moto x4 Build/OPWS27.57-40-6"
+        },
+        {
+          "entity_id": "unmatched_3456858",
+          "DeviceInfo": "moto x4 Build/OPWS27.57-40-6"
+        },
+        {
+          "entity_id": "unmatched_3456878",
+          "DeviceInfo": "moto x4 Build/OPWS27.57-40-6"
+        },
+        {
+          "entity_id": "unmatched_3456883",
+          "DeviceInfo": "moto x4 Build/OPWS27.57-40-6"
+        },
+        {
+          "entity_id": "unmatched_3456884",
+          "DeviceInfo": "moto x4 Build/OPWS27.57-40-6"
+        },
+        {
+          "entity_id": "unmatched_3456909",
+          "DeviceInfo": "moto x4 Build/OPWS27.57-40-6"
+        },
+        {
+          "entity_id": "unmatched_3456910",
+          "DeviceInfo": "moto x4 Build/OPWS27.57-40-6"
+        },
+        {
+          "entity_id": "unmatched_3467344",
+          "DeviceInfo": "moto x4 Build/OPWS27.57-40-6"
+        },
+        {
+          "entity_id": "unmatched_3496899",
+          "DeviceInfo": "moto x4 Build/OPWS27.57-40-6"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ring_48",
+      "entities": [
+        "unmatched_3469834",
+        "unmatched_3469837",
+        "unmatched_3469838",
+        "unmatched_3469840",
+        "unmatched_3484440",
+        "unmatched_3509293",
+        "unmatched_3509375"
+      ],
+      "n_entities": 7,
+      "n_transactions": 7,
+      "proxy_fraud_rate": 0.5714285714285714,
+      "edges": [
+        {
+          "entity_id": "unmatched_3469834",
+          "DeviceInfo": "XT1650"
+        },
+        {
+          "entity_id": "unmatched_3469837",
+          "DeviceInfo": "XT1650"
+        },
+        {
+          "entity_id": "unmatched_3469838",
+          "DeviceInfo": "XT1650"
+        },
+        {
+          "entity_id": "unmatched_3469840",
+          "DeviceInfo": "XT1650"
+        },
+        {
+          "entity_id": "unmatched_3484440",
+          "DeviceInfo": "XT1650"
+        },
+        {
+          "entity_id": "unmatched_3509293",
+          "DeviceInfo": "XT1650"
+        },
+        {
+          "entity_id": "unmatched_3509375",
+          "DeviceInfo": "XT1650"
+        }
+      ]
+    }
+  ]
+}
