@@ -49,3 +49,18 @@ export interface BaselineRow {
   tn: number;
   note: string;
 }
+
+export interface ThresholdCurvePoint {
+  threshold: number;
+  precision: number;
+  recall: number;
+  fpr: number;
+  n_flagged: number;
+}
+
+export interface ThresholdCurveData {
+  curve: ThresholdCurvePoint[];
+  n_total: number;
+  n_fraud: number;
+  deployed_confidence_threshold: number;
+}

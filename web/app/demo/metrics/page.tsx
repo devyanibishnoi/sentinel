@@ -1,9 +1,11 @@
 import comparisonData from "@/data/comparison.json";
 import baselinesData from "@/data/baselines.json";
-import { BaselineRow, ComparisonRow } from "@/lib/types";
+import thresholdCurveData from "@/data/threshold_curve.json";
+import { BaselineRow, ComparisonRow, ThresholdCurveData } from "@/lib/types";
 import { Caveat } from "@/components/Caveat";
 import { StatTile } from "@/components/StatTile";
 import { BarChart } from "@/components/BarChart";
+import { ThresholdExplorer } from "@/components/ThresholdExplorer";
 
 const comparison = [...(comparisonData.results as ComparisonRow[])].sort(
   (a, b) => b.pr_auc_full_test - a.pr_auc_full_test
@@ -29,6 +31,8 @@ export default function MetricsPage() {
         this one. All of it comes from the held-out BENCHMARK test split only, 85,004 transactions. The demo stream
         never contributes to a reported metric.
       </p>
+
+      <ThresholdExplorer data={thresholdCurveData as ThresholdCurveData} />
 
       <h2 className="text-sm font-semibold uppercase tracking-wide text-text-muted mt-8 mb-3">
         Detector vs. all four required baselines (PR-AUC)
