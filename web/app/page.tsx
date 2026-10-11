@@ -5,7 +5,7 @@ import { BarChart } from "@/components/BarChart";
 import { SplitBar } from "@/components/SplitBar";
 import comparisonData from "@/data/comparison.json";
 import { HEADLINE } from "@/lib/headline-stats";
-import { GITHUB_REPO_URL, GITHUB_PROFILE_URL, AUTHOR_NAME } from "@/lib/site";
+import { GITHUB_REPO_URL, GITHUB_PROFILE_URL, AUTHOR_NAME, PAPER_URL } from "@/lib/site";
 
 const prAucChartData = [...comparisonData.results]
   .sort((a, b) => b.pr_auc_full_test - a.pr_auc_full_test)
@@ -46,6 +46,9 @@ export default function LandingPage() {
             <Link href="/demo" className="text-text-muted hover:text-text transition-colors">
               Live demo
             </Link>
+            <a href={PAPER_URL} target="_blank" rel="noreferrer" className="text-text-muted hover:text-text transition-colors">
+              Read the paper ↗
+            </a>
             <a href={GITHUB_REPO_URL} target="_blank" rel="noreferrer" className="text-text-muted hover:text-text transition-colors">
               Source ↗
             </a>
@@ -79,6 +82,14 @@ export default function LandingPage() {
               className="rounded-md border border-border px-5 py-2.5 text-sm hover:border-border-strong transition-colors"
             >
               View source
+            </a>
+            <a
+              href={PAPER_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-md border border-border px-5 py-2.5 text-sm hover:border-border-strong transition-colors"
+            >
+              Read the paper
             </a>
           </div>
           <div className="flex flex-wrap items-center gap-2 mt-10 text-xs font-mono text-text-faint">
